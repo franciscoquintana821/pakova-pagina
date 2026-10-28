@@ -1,44 +1,1104 @@
 <!doctype html>
-<html lang="es-AR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow"><meta name="theme-color" content="#111111"><meta property="og:title" content="Pakova · Aprender nos conecta"><meta property="og:description" content="Formación tecnológica gratuita e inclusión digital en Rosario."><meta property="og:type" content="website"><title>Pakova · Formación, comunidad y oportunidades</title><meta name="description" content="Formación tecnológica gratuita y comunidad en Rosario. Conocé Pakova, consultá por próximas capacitaciones y encontrá cómo colaborar."><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f1d442'/%3E%3Ctext x='8' y='24' font-size='25' font-family='Arial' font-weight='bold'%3EP%3C/text%3E%3C/svg%3E"><link rel="stylesheet" href="style.css"><style>
-.hero-copy{max-width:720px}.hero h1{max-width:650px}.hero .intro{font-size:clamp(18px,2vw,23px);max-width:590px;line-height:1.45}.actions .button.yellow{font-size:1.08rem;padding:16px 24px;box-shadow:0 0 0 4px rgba(255,214,0,.12)}
-.intent-nav{display:flex;flex-wrap:wrap;gap:10px;margin:0 auto 28px;max-width:1200px;padding:0 24px}.intent-nav a{border:1px solid #555;border-radius:999px;padding:9px 15px;font-size:14px;text-decoration:none}.intent-nav a:first-child{background:#ffd600;color:#000;border-color:#ffd600}
-.how{padding:72px 6vw;background:#171717;border-block:1px solid #383838}.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1200px;margin:30px auto 0}.how-card{padding:26px;border:1px solid #444;background:#111}.how-card b{display:grid;place-items:center;width:42px;height:42px;border:1px solid #ffd600;border-radius:50%;color:#ffd600;margin-bottom:20px}.how-card h3{margin:0 0 10px}.how-card p{color:#f4f4f4;line-height:1.55}@media(max-width:700px){.how-grid{grid-template-columns:1fr}.intent-nav{padding:0 16px}.how{padding:52px 16px}}
-</style><script>document.addEventListener('DOMContentLoaded',()=>{const nav=document.querySelector('header');if(nav){const n=document.createElement('div');n.className='intent-nav';n.innerHTML='<a href="#capacitaciones">Quiero aprender</a><a href="#sumate">Quiero colaborar</a><a href="#comunidad">Somos una organización</a><a href="#contacto">Contactar</a>';nav.after(n)}const hero=document.querySelector('.hero h1');if(hero)hero.innerHTML='Tecnología que abre<br><span>nuevas oportunidades.</span>';const intro=document.querySelector('.hero .intro');if(intro)intro.textContent='Formación gratuita, acompañamiento y comunidad para que más personas de Rosario puedan acercarse al mundo IT.';const cap=document.querySelector('#capacitaciones');if(cap){const s=document.createElement('section');s.className='how';s.innerHTML='<p class="eyebrow">CÓMO FUNCIONA</p><h2>Tu próximo paso es simple.</h2><div class="how-grid"><article class="how-card"><b>01</b><h3>Elegí tu camino</h3><p>Conocé las capacitaciones y encontrá la propuesta que mejor se adapta a vos.</p></article><article class="how-card"><b>02</b><h3>Aprendé en comunidad</h3><p>Participá en encuentros presenciales o virtuales con acompañamiento cercano.</p></article><article class="how-card"><b>03</b><h3>Abrí oportunidades</h3><p>Convertí lo aprendido en nuevas herramientas para estudiar, trabajar y crecer.</p></article></div>';cap.before(s)}});</script><style> .yellow,.button.yellow,.next-card,.story-note,.manifesto,.intent-nav a:first-child{color:#000!important;background:#ffd600!important} .yellow:visited,.button.yellow:visited,.next-card a,.story-note a,.manifesto a{color:#000!important} .next-card p,.next-card h3,.next-card .eyebrow,.story-note p,.story-note span,.manifesto p,.manifesto span{color:#000!important} .next-card .button,.next-card .button.dark{background:#000!important;color:#fff!important;border-color:#000!important} </style><style>.visual-proof{padding:72px 6vw;background:#000;border-block:1px solid #333}.visual-proof-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;max-width:1200px;margin:30px auto 0}.visual-proof img{width:100%;height:100%;object-fit:cover;border:1px solid #444}.visual-main{min-height:360px}.visual-side{display:grid;grid-template-rows:1fr 1fr;gap:20px}.visual-caption{margin-top:14px;color:#f4f4f4;font-size:14px}.visual-proof .eyebrow{color:#ffd600}@media(max-width:700px){.visual-proof-grid{grid-template-columns:1fr}.visual-side{grid-template-rows:220px 220px}}</style>
-<script>document.addEventListener('DOMContentLoaded',()=>{const story=document.querySelector('#historia');if(story&&!document.querySelector('#imagenes-pakova')){const s=document.createElement('section');s.id='imagenes-pakova';s.className='visual-proof';s.innerHTML='<p class="eyebrow">PAKOVA EN TERRITORIO</p><h2>Personas, espacios<br><span>y comunidad.</span></h2><p class="visual-caption">Las imágenes de Pakova muestran dónde sucede el aprendizaje: en la comunidad, en la oficina y junto a las organizaciones que hacen posible cada encuentro.</p><div class="visual-proof-grid"><div><img class="visual-main" src="assets/oficina.avif" alt="Oficina y espacio de encuentro de Pakova"><p class="visual-caption">Un espacio para encontrarnos y acompañar nuevos proyectos.</p></div><div class="visual-side"><img src="assets/pakova.jpg" alt="Logo de Pakova con símbolo de banana y circuitos"><img src="assets/logo-NAN.avif" alt="Logo de organización aliada NAN Fuego del Sol"></div></div>';story.before(s)}});</script><style>
-header{background:#111!important;color:#fff!important;border-color:#3a3a3a!important}header .wordmark,header .wordmark span,header nav a,header .menu{color:#fff!important}header .wordmark span{opacity:.75}.intro,.section-heading>p,.feature-card p,.next-card p,.story p,.join-grid p,.address,figcaption,.partners>span{color:#f4f4f4!important}.partners>span strong{color:#fff!important}.partners{background:#111!important}.story-note{background:#ffd600!important;color:#000!important}.story-note span,.story-note p{color:#000!important}footer{background:#111!important;color:#fff!important;border-top-color:#3a3a3a!important}footer p,footer a,footer small,footer summary{color:#fff!important}.eyebrow{color:#ffd600!important}.faq summary{color:#fff!important}.contact .email,.contact .text-link{color:#fff!important}.contact figcaption{color:#f4f4f4!important}
-</style><style>.media{background:#111;border-block:1px solid #333}.media-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}.media figure{margin:0;background:#171717;border:1px solid #444}.media img{width:100%;height:230px;object-fit:cover;display:block}.media figcaption{padding:14px;color:#fff!important;font-size:14px}.courses{background:#000}.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.course-grid article{padding:26px;background:#171717;border:1px solid #444}.course-grid span{color:#ffd600;font-weight:700}.course-grid h3{color:#fff;margin:18px 0 10px}.course-grid p{color:#f4f4f4}.course-grid a{color:#ffd600;font-weight:700}@media(max-width:900px){.media-grid{grid-template-columns:repeat(2,1fr)}.course-grid{grid-template-columns:1fr}}@media(max-width:560px){.media-grid{grid-template-columns:1fr}}
-</style><style>
-.tech-sidebar{position:fixed;left:0;top:0;bottom:0;width:210px;background:#080909;border-right:1px solid #2f3432;padding:28px 20px;z-index:20;display:flex;flex-direction:column}.tech-mark{font:700 30px/1 'Space Grotesk',Arial;color:#fff;letter-spacing:-2px}.tech-mark span{color:#ffd600;font-size:25px}.tech-line{height:1px;background:linear-gradient(90deg,#ffd600,transparent);margin:28px 0}.tech-sidebar nav{display:flex;flex-direction:column;align-items:stretch;gap:6px}.tech-sidebar nav a{display:flex;align-items:center;gap:12px;color:#aeb7b2;text-decoration:none;font-size:13px;padding:11px 10px;border-left:2px solid transparent;transition:.2s}.tech-sidebar nav a:hover,.tech-sidebar nav a:focus{color:#fff;background:#151918;border-left-color:#ffd600}.tech-sidebar nav i{font-style:normal;font-size:10px;color:#ffd600;letter-spacing:1px}.tech-pulse{margin-top:auto;width:9px;height:9px;border-radius:50%;background:#ffd600;box-shadow:0 0 0 6px #262b27,0 0 18px #ffd600}.tech-sidebar~*{margin-left:210px}.tech-sidebar~footer{margin-left:210px}@media(max-width:800px){.tech-sidebar{position:sticky;top:0;width:100%;height:auto;padding:12px 16px;display:block;border-right:0;border-bottom:1px solid #2f3432}.tech-mark{display:inline-block;font-size:22px}.tech-line,.tech-pulse{display:none}.tech-sidebar nav{display:flex;flex-direction:row;overflow-x:auto;margin-top:10px;gap:2px}.tech-sidebar nav a{white-space:nowrap;padding:7px 9px;font-size:11px}.tech-sidebar~*{margin-left:0}.tech-sidebar~footer{margin-left:0}header{top:78px!important}}
-</style><style>
-/* limpieza visual: una sola navegación y formas más orgánicas */
-.intent-nav{display:none!important}header nav{display:none!important}header{margin-left:0;padding-left:40px;padding-right:40px}header .nav-cta{display:inline-flex}.hero,.section,.how,.media,.courses,.idea,.tools,.contact,.join{border-radius:0}.feature-card,.next-card,.how-card,.course-grid article,.media figure{border:1px solid rgba(255,255,255,.12)!important;border-radius:22px!important;box-shadow:0 14px 40px rgba(0,0,0,.16)}.media img{border-radius:18px 18px 0 0}.brand-panel{border-radius:28px!important;overflow:hidden}.story-note{border-radius:24px!important;transform:rotate(-1deg)}.button{border-radius:999px!important}.partners>span{border-radius:14px!important}.faq details{border-radius:14px!important}.contact figure img{border-radius:24px!important}@media(max-width:800px){header{margin-left:0;padding-left:20px;padding-right:20px}.tech-sidebar~header{margin-left:0}}
-</style></head>
-<body><aside class="tech-sidebar"><div class="tech-mark">P<span>⌁</span></div><div class="tech-line"></div><nav aria-label="Navegación principal"><a href="#inicio"><i>01</i> Inicio</a><a href="#capacitaciones"><i>02</i> Aprender</a><a href="#historia"><i>03</i> Historia</a><a href="#comunidad"><i>04</i> Comunidad</a><a href="#idea"><i>05</i> Nuestra idea</a><a href="#cursos"><i>06</i> Cursos</a><a href="#herramientas"><i>07</i> Herramientas</a><a href="#contacto"><i>08</i> Contacto</a></nav><button class="theme-switch" id="theme-switch" type="button" aria-pressed="false" onclick="document.body.classList.toggle('light-mode');this.setAttribute('aria-pressed',document.body.classList.contains('light-mode'))"><span aria-hidden="true">☼</span> Modo claro</button><div class="tech-pulse"></div></aside><a class="skip" href="#contenido">Ir al contenido</a><header><a class="wordmark" href="#inicio" aria-label="Pakova, inicio">PAKOVA<span>APRENDER NOS CONECTA</span></a><button class="menu" aria-expanded="false" aria-controls="nav">Menú</button><nav id="nav" aria-label="Principal"><a href="#capacitaciones">Capacitaciones</a><a href="#historia">Nuestra historia</a><a href="#idea">Nuestra idea</a><a href="#comunidad">Comunidad</a><a href="#herramientas">Herramientas</a><a class="nav-cta" href="#sumate">Quiero colaborar</a></nav></header>
-<main id="contenido"><section class="hero" id="inicio"><div class="hero-copy"><p class="eyebrow">ROSARIO · FORMACIÓN GRATUITA</p><h1>Capacitación tecnológica gratuita<br><span>para abrir nuevas oportunidades.</span></h1><p class="intro">Pakova acompaña a personas de Rosario que quieren aprender informática, acercarse al mundo IT y crecer junto a su comunidad.</p><div class="actions"><a class="button yellow" href="#capacitaciones">Quiero capacitarme</a><a class="button outline" href="#sumate">Quiero ser parte</a></div><div class="hero-facts"><span>Formación sin costo</span><span>Encuentros en comunidad</span><span>Acompañamiento cercano</span></div></div><div class="brand-panel"><span class="panel-label">TECNOLOGÍA + COMUNIDAD</span><img src="assets/pakova.jpg" alt="Pakova: una banana con circuitos rodeada de personas conectadas" width="6250" height="6250"><p>El conocimiento se comparte.<br>Las oportunidades se construyen.</p></div></section>
-<div class="manifesto"><span>DE ROSARIO, PARA NUESTRA COMUNIDAD.</span><p>Tu punto de partida no define hasta dónde podés llegar.</p></div>
-<section class="section" id="capacitaciones"><div class="section-heading"><div><p class="eyebrow">01 / APRENDER</p><h2>Tu próximo paso<br>puede empezar acá.</h2></div><p>No necesitás tener todo resuelto para acercarte. Contanos qué te gustaría aprender y consultá por las próximas actividades.</p></div><div class="learning-grid"><article class="feature-card"><div class="tag">FORMACIÓN TECNOLÓGICA GRATUITA</div><h3>Un primer acercamiento<br>al mundo IT.</h3><p>Capacitaciones en informática, talleres y espacios de aprendizaje para desarrollar nuevas habilidades junto a otras personas.</p><div class="course-meta"><span>Rosario</span><span>Sin costo</span><span>En comunidad</span></div><a class="text-link" data-contact="Hola Pakova, quiero conocer las próximas capacitaciones gratuitas, sus requisitos y horarios." href="https://wa.me/5493416206812">Consultar capacitaciones</a></article><article class="next-card"><p class="eyebrow">PRÓXIMAS ACTIVIDADES</p><h3>Que no se te pase<br>la próxima oportunidad.</h3><p>Consultá las fechas, sedes y requisitos disponibles directamente con el equipo.</p><a class="button dark" data-contact="Hola Pakova, me gustaría recibir información cuando haya nuevas capacitaciones gratuitas. ¿Cómo puedo enterarme?" href="https://wa.me/5493416206812">Consultar por novedades</a><small>Se abre WhatsApp para que puedas enviar tu consulta.</small></article></div></section>
-<section class="story section" id="historia"><div><p class="eyebrow">02 / NUESTRAS RAÍCES</p><h2>Nacimos en un barrio.<br><span>Crecemos en comunidad.</span></h2><p>Pakova nació en Villa Banana. Nuestro nombre significa «banana» en guaraní: una manera de llevar el origen con nosotros, en cada nueva oportunidad.</p><p>Somos una asociación civil sin fines de lucro integrada por jóvenes que antes fueron alumnos. Hoy compartimos ese aprendizaje para que más personas puedan acercarse a la tecnología.</p></div><aside class="story-note"><span>APRENDER.<br>COMPARTIR.<br>VOLVER A EMPEZAR.</span><p>De alumnos a parte del equipo.<br>Así sigue creciendo Pakova.</p></aside></section>
-<section class="section" id="comunidad"><div class="section-heading"><div><p class="eyebrow">03 / CONECTAR</p><h2>El aula también<br>es el barrio.</h2></div><p>Trabajamos junto a centros comunitarios y organizaciones de Rosario para acercar conocimientos y acompañamiento a más personas.</p></div><div class="partners"><span>Asociación Civil<br><strong>NAN Fuego del Sol</strong></span><span>Unión Vecinal<br><strong>San Martín A</strong></span><span><strong>Creciendo<br>en Comunidad</strong></span><span>Biblioteca Popular<br><strong>Empalme Norte</strong></span><span>Vecinal<br><strong>Antártida</strong></span><span>Vecinal<br><strong>Descendientes de Victoria</strong></span></div></section>
-<section class="join section" id="sumate"><p class="eyebrow">04 / SER PARTE</p><h2>Lo que sabés, lo que hacés,<br>lo que podés aportar.<br><span>Todo puede sumar.</span></h2><div class="join-grid"><article><span class="number">01</span><h3>Quiero aprender</h3><p>Buscá tu punto de partida y conocé las próximas capacitaciones.</p><a href="#capacitaciones">Explorar formación</a></article><article><span class="number">02</span><h3>Quiero ser voluntario</h3><p>Acercá tus conocimientos y conversá con el equipo sobre cómo participar.</p><a data-contact="Hola Pakova, me gustaría colaborar como voluntario. ¿Cómo puedo sumarme?" href="https://wa.me/5493416206812">Sumarme al equipo</a></article><article><span class="number">03</span><h3>Somos una empresa</h3><p>Exploremos formas de acompañar la formación tecnológica de la comunidad.</p><a data-contact="Hola Pakova, represento a una empresa y nos gustaría conversar sobre cómo colaborar." href="https://wa.me/5493416206812">Conversar sobre una alianza</a></article><article><span class="number">04</span><h3>Somos una organización</h3><p>Conectemos tu espacio con nuevas oportunidades de aprendizaje.</p><a data-contact="Hola Pakova, somos una organización y queremos conversar sobre actividades en nuestra comunidad." href="https://wa.me/5493416206812">Acercar una propuesta</a></article></div></section>
-<section class="section faq"><div><p class="eyebrow">ANTES DE EMPEZAR</p><h2>¿Te quedó<br>alguna duda?</h2></div><div><details><summary>¿Las capacitaciones tienen costo?</summary><p>La formación que brinda Pakova es gratuita. Consultá al equipo qué actividades están disponibles.</p></details><details><summary>¿Necesito conocimientos previos?</summary><p>Los requisitos dependen de cada actividad. Contanos qué experiencia tenés para que el equipo pueda orientarte.</p></details><details><summary>¿Dónde se realizan las actividades?</summary><p>Pakova trabaja en distintos centros comunitarios de Rosario. La sede y los horarios se confirman para cada propuesta.</p></details><details><summary>¿Cómo me inscribo?</summary><p>Escribí al equipo por WhatsApp o correo para conocer las convocatorias y el proceso de inscripción. Una consulta no reserva una vacante.</p></details></div></section>
-<section class="contact section" id="contacto"><div><p class="eyebrow">HABLEMOS</p><h2>Una conversación<br>puede ser el comienzo.</h2><a class="button yellow" data-contact="Hola Pakova, quisiera hacerles una consulta." href="https://wa.me/5493416206812">Escribir por WhatsApp</a><a class="email" href="mailto:pakovatesting@gmail.com">pakovatesting@gmail.com</a><p class="address">Córdoba 1330 · Piso 7, departamento 1<br>Rosario, Santa Fe</p><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Cordoba+1330+Rosario+Santa+Fe" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a><form id="consulta-form" class="contact-form"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" required autocomplete="name"><label for="mensaje">¿Qué querés consultar?</label><textarea id="mensaje" name="mensaje" rows="3" required></textarea><button class="button yellow" type="submit">Enviar consulta por WhatsApp</button></form></div><figure><img src="assets/oficina.avif" loading="lazy" alt="Oficina de Pakova en Rosario" width="640" height="480"><figcaption>Un espacio para encontrarnos. Coordiná tu visita con el equipo.</figcaption><iframe class="map" title="Mapa de la oficina Pakova" loading="lazy" src="https://www.google.com/maps?q=Córdoba%201330%20Rosario%20Santa%20Fe&output=embed"></iframe></figure></section><section class="media section" id="galeria"><div class="section-heading"><div><p class="eyebrow">PAKOVA EN ACCIÓN</p><h2>La tecnología<br><span>se aprende acompañados.</span></h2></div><p>Pakova conecta personas, organizaciones y empresas para que aprender informática se convierta en una oportunidad concreta.</p></div><div class="media-grid"><figure><img src="assets/oficina.avif" alt="Personas aprendiendo en la oficina de Pakova"><figcaption><strong>01 · Un lugar para aprender</strong><br>Oficina Pakova · Córdoba 1330</figcaption></figure><figure><img src="assets/logo-NAN.avif" alt="Logo de NAN Fuego del Sol, organización aliada"><figcaption><strong>02 · Una red que acompaña</strong><br>Trabajamos junto a organizaciones de Rosario</figcaption></figure><figure><img src="assets/vecinal_san_martin.avif" alt="Logo de Unión Vecinal San Martín A"><figcaption><strong>03 · El aula llega al barrio</strong><br>Formación en espacios comunitarios</figcaption></figure><figure><img src="assets/pakova.jpg" alt="Logo de Pakova con banana y circuitos"><figcaption><strong>04 · Aprender abre caminos</strong><br>Más herramientas para estudiar y trabajar</figcaption></figure></div></section>
-<section class="idea section" id="idea"><div class="section-heading"><div><p class="eyebrow">NUESTRA IDEA</p><h2>Aprender puede<br><span>cambiar una vida.</span></h2></div><p>En Pakova abrimos las puertas a personas de todas las edades con formación gratuita y accesible en computación.</p></div><div class="learning-grid"><article class="feature-card"><div class="tag">ACOMPAÑAMIENTO</div><h3>Mucho más que una clase.</h3><p>Cada persona encuentra confianza, comunidad y acompañamiento para crecer. Organizamos talleres, mentorías y espacios de encuentro.</p></article><article class="next-card"><div class="tag">OPORTUNIDADES</div><h3>Del aprendizaje a la acción.</h3><p>Transformamos habilidades digitales en herramientas para estudiar, trabajar y construir un futuro con más posibilidades.</p></article></div></section>
-<section class="courses section" id="cursos"><div class="section-heading"><div><p class="eyebrow">04 / CURSOS</p><h2>Aprendé habilidades<br><span>para el mundo digital.</span></h2></div><p>Capacitaciones gratuitas, con acompañamiento y práctica. Las fechas, sedes y horarios se confirman en cada convocatoria.</p></div><div class="course-grid"><article><span>01</span><h3>Testing Manual</h3><p>Fundamentos de QA, ciclo de vida, casos de prueba, reportes de errores y metodologías ágiles.</p><a class="text-link" href="https://wa.me/5493416206812">Consultar curso →</a></article><article><span>02</span><h3>Testing de Videojuegos</h3><p>Análisis de bugs, jugabilidad, rendimiento, experiencia de usuario y compatibilidad.</p><a class="text-link" href="https://wa.me/5493416206812">Consultar curso →</a></article><article><span>03</span><h3>Alfabetización Digital</h3><p>Computadora, internet, correo, archivos, herramientas de oficina y seguridad digital.</p><a class="text-link" href="https://wa.me/5493416206812">Consultar curso →</a></article><article><span>04</span><h3>Programación Básica</h3><p>Pensamiento lógico, variables, condicionales, bucles, funciones y algoritmos simples.</p><a class="text-link" href="https://wa.me/5493416206812">Consultar curso →</a></article></div><div class="upcoming"><strong>Próximos cursos:</strong> Testing con inteligencia artificial · Python para automatización · Java con Spring Boot.</div></section><section class="tools section" id="herramientas"><div class="section-heading"><div><p class="eyebrow">¿ERES PARTE?</p><h2>Herramientas<br><span>de la comunidad.</span></h2></div><p>Si ya participás de Pakova, accedé a las plataformas que usamos para aprender, practicar y organizar proyectos.</p></div><div class="course-grid"><article><span>01</span><h3>SquashTM</h3><p>Gestión y seguimiento de pruebas.</p><a href="https://squash.pakova.org/squash" target="_blank">Acceder a Squash →</a></article><article><span>02</span><h3>MantisBT</h3><p>Organización y seguimiento de incidencias.</p><a href="https://mantis.pakova.org" target="_blank">Acceder a MantisBT →</a></article><article><span>03</span><h3>TestLink</h3><p>Planificación y documentación de casos de prueba.</p><a href="https://testlink.pakova.org" target="_blank">Acceder a TestLink →</a></article></div></section></main>
-<footer><div><a class="wordmark" href="#inicio">PAKOVA</a><p>Tecnología que abre oportunidades.</p></div><div><a href="https://www.instagram.com/pakova.ong/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://www.facebook.com/PakovaTesting" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.linkedin.com/company/pakova-testing" target="_blank" rel="noopener noreferrer">LinkedIn</a></div><details><summary>Herramientas de la comunidad</summary><a href="https://squash.pakova.org/squash" target="_blank" rel="noopener noreferrer">SquashTM</a><a href="https://mantis.pakova.org" target="_blank" rel="noopener noreferrer">MantisBT</a><a href="https://testlink.pakova.org" target="_blank" rel="noopener noreferrer">TestLink</a></details><small>© 2026 Pakova · Asociación civil sin fines de lucro</small></footer><script src="app.js"></script></body></html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#111111" />
+    <meta property="og:title" content="Pakova · Aprender nos conecta" />
+    <meta
+      property="og:description"
+      content="Formación tecnológica gratuita e inclusión digital en Rosario."
+    />
+    <meta property="og:type" content="website" />
+    <title>Pakova · Formación, comunidad y oportunidades</title>
+    <meta
+      name="description"
+      content="Formación tecnológica gratuita y comunidad en Rosario. Conocé Pakova, consultá por próximas capacitaciones y encontrá cómo colaborar."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23f1d442'/%3E%3Ctext x='8' y='24' font-size='25' font-family='Arial' font-weight='bold'%3EP%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .hero-copy {
+        max-width: 720px;
+      }
+      .hero h1 {
+        max-width: 650px;
+      }
+      .hero .intro {
+        font-size: clamp(18px, 2vw, 23px);
+        max-width: 590px;
+        line-height: 1.45;
+      }
+      .actions .button.yellow {
+        font-size: 1.08rem;
+        padding: 16px 24px;
+        box-shadow: 0 0 0 4px rgba(255, 214, 0, 0.12);
+      }
+      .intent-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 auto 28px;
+        max-width: 1200px;
+        padding: 0 24px;
+      }
+      .intent-nav a {
+        border: 1px solid #555;
+        border-radius: 999px;
+        padding: 9px 15px;
+        font-size: 14px;
+        text-decoration: none;
+      }
+      .intent-nav a:first-child {
+        background: #ffd600;
+        color: #000;
+        border-color: #ffd600;
+      }
+      .how {
+        padding: 72px 6vw;
+        background: #171717;
+        border-block: 1px solid #383838;
+      }
+      .how-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        max-width: 1200px;
+        margin: 30px auto 0;
+      }
+      .how-card {
+        padding: 26px;
+        border: 1px solid #444;
+        background: #111;
+      }
+      .how-card b {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border: 1px solid #ffd600;
+        border-radius: 50%;
+        color: #ffd600;
+        margin-bottom: 20px;
+      }
+      .how-card h3 {
+        margin: 0 0 10px;
+      }
+      .how-card p {
+        color: #f4f4f4;
+        line-height: 1.55;
+      }
+      @media (max-width: 700px) {
+        .how-grid {
+          grid-template-columns: 1fr;
+        }
+        .intent-nav {
+          padding: 0 16px;
+        }
+        .how {
+          padding: 52px 16px;
+        }
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const nav = document.querySelector("header");
+        if (nav) {
+          const n = document.createElement("div");
+          n.className = "intent-nav";
+          n.innerHTML =
+            '<a href="#capacitaciones">Quiero aprender</a><a href="#sumate">Quiero colaborar</a><a href="#comunidad">Somos una organización</a><a href="#contacto">Contactar</a>';
+          nav.after(n);
+        }
+        const hero = document.querySelector(".hero h1");
+        if (hero)
+          hero.innerHTML =
+            "Tecnología que abre<br><span>nuevas oportunidades.</span>";
+        const intro = document.querySelector(".hero .intro");
+        if (intro)
+          intro.textContent =
+            "Formación gratuita, acompañamiento y comunidad para que más personas de Rosario puedan acercarse al mundo IT.";
+        const cap = document.querySelector("#capacitaciones");
+        if (cap) {
+          const s = document.createElement("section");
+          s.className = "how";
+          s.innerHTML =
+            '<p class="eyebrow">CÓMO FUNCIONA</p><h2>Tu próximo paso es simple.</h2><div class="how-grid"><article class="how-card"><b>01</b><h3>Elegí tu camino</h3><p>Conocé las capacitaciones y encontrá la propuesta que mejor se adapta a vos.</p></article><article class="how-card"><b>02</b><h3>Aprendé en comunidad</h3><p>Participá en encuentros presenciales o virtuales con acompañamiento cercano.</p></article><article class="how-card"><b>03</b><h3>Abrí oportunidades</h3><p>Convertí lo aprendido en nuevas herramientas para estudiar, trabajar y crecer.</p></article></div>';
+          cap.before(s);
+        }
+      });
+    </script>
+    <style>
+      .yellow,
+      .button.yellow,
+      .next-card,
+      .story-note,
+      .manifesto,
+      .intent-nav a:first-child {
+        color: #000 !important;
+        background: #ffd600 !important;
+      }
+      .yellow:visited,
+      .button.yellow:visited,
+      .next-card a,
+      .story-note a,
+      .manifesto a {
+        color: #000 !important;
+      }
+      .next-card p,
+      .next-card h3,
+      .next-card .eyebrow,
+      .story-note p,
+      .story-note span,
+      .manifesto p,
+      .manifesto span {
+        color: #000 !important;
+      }
+      .next-card .button,
+      .next-card .button.dark {
+        background: #000 !important;
+        color: #fff !important;
+        border-color: #000 !important;
+      }
+    </style>
+    <style>
+      .visual-proof {
+        padding: 72px 6vw;
+        background: #000;
+        border-block: 1px solid #333;
+      }
+      .visual-proof-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 30px auto 0;
+      }
+      .visual-proof img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 1px solid #444;
+      }
+      .visual-main {
+        min-height: 360px;
+      }
+      .visual-side {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+      }
+      .visual-caption {
+        margin-top: 14px;
+        color: #f4f4f4;
+        font-size: 14px;
+      }
+      .visual-proof .eyebrow {
+        color: #ffd600;
+      }
+      @media (max-width: 700px) {
+        .visual-proof-grid {
+          grid-template-columns: 1fr;
+        }
+        .visual-side {
+          grid-template-rows: 220px 220px;
+        }
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const story = document.querySelector("#historia");
+        if (story && !document.querySelector("#imagenes-pakova")) {
+          const s = document.createElement("section");
+          s.id = "imagenes-pakova";
+          s.className = "visual-proof";
+          s.innerHTML =
+            '<p class="eyebrow">PAKOVA EN TERRITORIO</p><h2>Personas, espacios<br><span>y comunidad.</span></h2><p class="visual-caption">Las imágenes de Pakova muestran dónde sucede el aprendizaje: en la comunidad, en la oficina y junto a las organizaciones que hacen posible cada encuentro.</p><div class="visual-proof-grid"><div><img class="visual-main" src="assets/oficina.avif" alt="Oficina y espacio de encuentro de Pakova"><p class="visual-caption">Un espacio para encontrarnos y acompañar nuevos proyectos.</p></div><div class="visual-side"><img src="assets/pakova.jpg" alt="Logo de Pakova con símbolo de banana y circuitos"><img src="assets/logo-NAN.avif" alt="Logo de organización aliada NAN Fuego del Sol"></div></div>';
+          story.before(s);
+        }
+      });
+    </script>
+    <style>
+      header {
+        background: #111 !important;
+        color: #fff !important;
+        border-color: #3a3a3a !important;
+      }
+      header .wordmark,
+      header .wordmark span,
+      header nav a,
+      header .menu {
+        color: #fff !important;
+      }
+      header .wordmark span {
+        opacity: 0.75;
+      }
+      .intro,
+      .section-heading > p,
+      .feature-card p,
+      .next-card p,
+      .story p,
+      .join-grid p,
+      .address,
+      figcaption,
+      .partners > span {
+        color: #f4f4f4 !important;
+      }
+      .partners > span strong {
+        color: #fff !important;
+      }
+      .partners {
+        background: #111 !important;
+      }
+      .story-note {
+        background: #ffd600 !important;
+        color: #000 !important;
+      }
+      .story-note span,
+      .story-note p {
+        color: #000 !important;
+      }
+      footer {
+        background: #111 !important;
+        color: #fff !important;
+        border-top-color: #3a3a3a !important;
+      }
+      footer p,
+      footer a,
+      footer small,
+      footer summary {
+        color: #fff !important;
+      }
+      .eyebrow {
+        color: #ffd600 !important;
+      }
+      .faq summary {
+        color: #fff !important;
+      }
+      .contact .email,
+      .contact .text-link {
+        color: #fff !important;
+      }
+      .contact figcaption {
+        color: #f4f4f4 !important;
+      }
+    </style>
+    <style>
+      .media {
+        background: #111;
+        border-block: 1px solid #333;
+      }
+      .media-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        margin-top: 32px;
+      }
+      .media figure {
+        margin: 0;
+        background: #171717;
+        border: 1px solid #444;
+      }
+      .media img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        display: block;
+      }
+      .media figcaption {
+        padding: 14px;
+        color: #fff !important;
+        font-size: 14px;
+      }
+      .courses {
+        background: #000;
+      }
+      .course-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 30px;
+      }
+      .course-grid article {
+        padding: 26px;
+        background: #171717;
+        border: 1px solid #444;
+      }
+      .course-grid span {
+        color: #ffd600;
+        font-weight: 700;
+      }
+      .course-grid h3 {
+        color: #fff;
+        margin: 18px 0 10px;
+      }
+      .course-grid p {
+        color: #f4f4f4;
+      }
+      .course-grid a {
+        color: #ffd600;
+        font-weight: 700;
+      }
+      @media (max-width: 900px) {
+        .media-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .course-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        .media-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <style>
+      .tech-sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 210px;
+        background: #080909;
+        border-right: 1px solid #2f3432;
+        padding: 28px 20px;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+      }
+      .tech-mark {
+        font:
+          700 30px/1 "Space Grotesk",
+          Arial;
+        color: #fff;
+        letter-spacing: -2px;
+      }
+      .tech-mark span {
+        color: #ffd600;
+        font-size: 25px;
+      }
+      .tech-line {
+        height: 1px;
+        background: linear-gradient(90deg, #ffd600, transparent);
+        margin: 28px 0;
+      }
+      .tech-sidebar nav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+      }
+      .tech-sidebar nav a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #aeb7b2;
+        text-decoration: none;
+        font-size: 13px;
+        padding: 11px 10px;
+        border-left: 2px solid transparent;
+        transition: 0.2s;
+      }
+      .tech-sidebar nav a:hover,
+      .tech-sidebar nav a:focus {
+        color: #fff;
+        background: #151918;
+        border-left-color: #ffd600;
+      }
+      .tech-sidebar nav i {
+        font-style: normal;
+        font-size: 10px;
+        color: #ffd600;
+        letter-spacing: 1px;
+      }
+      .tech-pulse {
+        margin-top: auto;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #ffd600;
+        box-shadow:
+          0 0 0 6px #262b27,
+          0 0 18px #ffd600;
+      }
+      .tech-sidebar ~ * {
+        margin-left: 210px;
+      }
+      .tech-sidebar ~ footer {
+        margin-left: 210px;
+      }
+      @media (max-width: 800px) {
+        .tech-sidebar {
+          position: sticky;
+          top: 0;
+          width: 100%;
+          height: auto;
+          padding: 12px 16px;
+          display: block;
+          border-right: 0;
+          border-bottom: 1px solid #2f3432;
+        }
+        .tech-mark {
+          display: inline-block;
+          font-size: 22px;
+        }
+        .tech-line,
+        .tech-pulse {
+          display: none;
+        }
+        .tech-sidebar nav {
+          display: flex;
+          flex-direction: row;
+          overflow-x: auto;
+          margin-top: 10px;
+          gap: 2px;
+        }
+        .tech-sidebar nav a {
+          white-space: nowrap;
+          padding: 7px 9px;
+          font-size: 11px;
+        }
+        .tech-sidebar ~ * {
+          margin-left: 0;
+        }
+        .tech-sidebar ~ footer {
+          margin-left: 0;
+        }
+        header {
+          top: 78px !important;
+        }
+      }
+    </style>
+    <style>
+      /* limpieza visual: una sola navegación y formas más orgánicas */
+      .intent-nav {
+        display: none !important;
+      }
+      header nav {
+        display: none !important;
+      }
+      header {
+        margin-left: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      header .nav-cta {
+        display: inline-flex;
+      }
+      .hero,
+      .section,
+      .how,
+      .media,
+      .courses,
+      .idea,
+      .tools,
+      .contact,
+      .join {
+        border-radius: 0;
+      }
+      .feature-card,
+      .next-card,
+      .how-card,
+      .course-grid article,
+      .media figure {
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+        border-radius: 22px !important;
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16);
+      }
+      .media img {
+        border-radius: 18px 18px 0 0;
+      }
+      .brand-panel {
+        border-radius: 28px !important;
+        overflow: hidden;
+      }
+      .story-note {
+        border-radius: 24px !important;
+        transform: rotate(-1deg);
+      }
+      .button {
+        border-radius: 999px !important;
+      }
+      .partners > span {
+        border-radius: 14px !important;
+      }
+      .faq details {
+        border-radius: 14px !important;
+      }
+      .contact figure img {
+        border-radius: 24px !important;
+      }
+      @media (max-width: 800px) {
+        header {
+          margin-left: 0;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .tech-sidebar ~ header {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="tech-sidebar">
+      <div class="tech-mark">P<span>⌁</span></div>
+      <div class="tech-line"></div>
+      <nav aria-label="Navegación principal">
+        <a href="#inicio"><i>01</i> Inicio</a
+        ><a href="#capacitaciones"><i>02</i> Aprender</a
+        ><a href="#historia"><i>03</i> Historia</a
+        ><a href="#comunidad"><i>04</i> Comunidad</a
+        ><a href="#idea"><i>05</i> Nuestra idea</a
+        ><a href="#cursos"><i>06</i> Cursos</a
+        ><a href="#herramientas"><i>07</i> Herramientas</a
+        ><a href="#contacto"><i>08</i> Contacto</a>
+      </nav>
+      <button
+        class="theme-switch"
+        id="theme-switch"
+        type="button"
+        aria-pressed="false"
+        onclick="
+          document.body.classList.toggle('light-mode');
+          this.setAttribute(
+            'aria-pressed',
+            document.body.classList.contains('light-mode'),
+          );
+        "
+      >
+        <span aria-hidden="true">☼</span> Modo claro
+      </button>
+      <div class="tech-pulse"></div>
+    </aside>
+    <a class="skip" href="#contenido">Ir al contenido</a>
+    <header>
+      <a class="wordmark" href="#inicio" aria-label="Pakova, inicio"
+        >PAKOVA<span>APRENDER NOS CONECTA</span></a
+      ><button class="menu" aria-expanded="false" aria-controls="nav">
+        Menú
+      </button>
+      <nav id="nav" aria-label="Principal">
+        <a href="#capacitaciones">Capacitaciones</a
+        ><a href="#historia">Nuestra historia</a><a href="#idea">Nuestra idea</a
+        ><a href="#comunidad">Comunidad</a
+        ><a href="#herramientas">Herramientas</a
+        ><a class="nav-cta" href="#sumate">Quiero colaborar</a>
+      </nav>
+    </header>
+    <main id="contenido">
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow">ROSARIO · FORMACIÓN GRATUITA</p>
+          <h1>
+            Capacitación tecnológica gratuita<br /><span
+              >para abrir nuevas oportunidades.</span
+            >
+          </h1>
+          <p class="intro">
+            Pakova acompaña a personas de Rosario que quieren aprender
+            informática, acercarse al mundo IT y crecer junto a su comunidad.
+          </p>
+          <div class="actions">
+            <a class="button yellow" href="#capacitaciones"
+              >Quiero capacitarme</a
+            ><a class="button outline" href="#sumate">Quiero ser parte</a>
+          </div>
+          <div class="hero-facts">
+            <span>Formación sin costo</span><span>Encuentros en comunidad</span
+            ><span>Acompañamiento cercano</span>
+          </div>
+        </div>
+        <div class="brand-panel">
+          <span class="panel-label">TECNOLOGÍA + COMUNIDAD</span
+          ><img
+            src="assets/pakova.jpg"
+            alt="Pakova: una banana con circuitos rodeada de personas conectadas"
+            width="6250"
+            height="6250"
+          />
+          <p>
+            El conocimiento se comparte.<br />Las oportunidades se construyen.
+          </p>
+        </div>
+      </section>
+      <div class="manifesto">
+        <span>DE ROSARIO, PARA NUESTRA COMUNIDAD.</span>
+        <p>Tu punto de partida no define hasta dónde podés llegar.</p>
+      </div>
+      <section class="section" id="capacitaciones">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / APRENDER</p>
+            <h2>Tu próximo paso<br />puede empezar acá.</h2>
+          </div>
+          <p>
+            No necesitás tener todo resuelto para acercarte. Contanos qué te
+            gustaría aprender y consultá por las próximas actividades.
+          </p>
+        </div>
+        <div class="learning-grid">
+          <article class="feature-card">
+            <div class="tag">FORMACIÓN TECNOLÓGICA GRATUITA</div>
+            <h3>Un primer acercamiento<br />al mundo IT.</h3>
+            <p>
+              Capacitaciones en informática, talleres y espacios de aprendizaje
+              para desarrollar nuevas habilidades junto a otras personas.
+            </p>
+            <div class="course-meta">
+              <span>Rosario</span><span>Sin costo</span
+              ><span>En comunidad</span>
+            </div>
+            <a
+              class="text-link"
+              data-contact="Hola Pakova, quiero conocer las próximas capacitaciones gratuitas, sus requisitos y horarios."
+              href="https://wa.me/5493416206812"
+              >Consultar capacitaciones</a
+            >
+          </article>
+          <article class="next-card">
+            <p class="eyebrow">PRÓXIMAS ACTIVIDADES</p>
+            <h3>Que no se te pase<br />la próxima oportunidad.</h3>
+            <p>
+              Consultá las fechas, sedes y requisitos disponibles directamente
+              con el equipo.
+            </p>
+            <a
+              class="button dark"
+              data-contact="Hola Pakova, me gustaría recibir información cuando haya nuevas capacitaciones gratuitas. ¿Cómo puedo enterarme?"
+              href="https://wa.me/5493416206812"
+              >Consultar por novedades</a
+            ><small>Se abre WhatsApp para que puedas enviar tu consulta.</small>
+          </article>
+        </div>
+      </section>
+      <section class="story section" id="historia">
+        <div>
+          <p class="eyebrow">02 / NUESTRAS RAÍCES</p>
+          <h2>
+            Nacimos en un barrio.<br /><span>Crecemos en comunidad.</span>
+          </h2>
+          <p>
+            Pakova nació en Villa Banana. Nuestro nombre significa «banana» en
+            guaraní: una manera de llevar el origen con nosotros, en cada nueva
+            oportunidad.
+          </p>
+          <p>
+            Somos una asociación civil sin fines de lucro integrada por jóvenes
+            que antes fueron alumnos. Hoy compartimos ese aprendizaje para que
+            más personas puedan acercarse a la tecnología.
+          </p>
+        </div>
+        <aside class="story-note">
+          <span>APRENDER.<br />COMPARTIR.<br />VOLVER A EMPEZAR.</span>
+          <p>De alumnos a parte del equipo.<br />Así sigue creciendo Pakova.</p>
+        </aside>
+      </section>
+      <section class="section" id="comunidad">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 / CONECTAR</p>
+            <h2>El aula también<br />es el barrio.</h2>
+          </div>
+          <p>
+            Trabajamos junto a centros comunitarios y organizaciones de Rosario
+            para acercar conocimientos y acompañamiento a más personas.
+          </p>
+        </div>
+        <div class="partners">
+          <span>Asociación Civil<br /><strong>NAN Fuego del Sol</strong></span
+          ><span>Unión Vecinal<br /><strong>San Martín A</strong></span
+          ><span
+            ><strong>Creciendo<br />en Comunidad</strong></span
+          ><span>Biblioteca Popular<br /><strong>Empalme Norte</strong></span
+          ><span>Vecinal<br /><strong>Antártida</strong></span
+          ><span>Vecinal<br /><strong>Descendientes de Victoria</strong></span>
+        </div>
+      </section>
+      <section class="join section" id="sumate">
+        <p class="eyebrow">04 / SER PARTE</p>
+        <h2>
+          Lo que sabés, lo que hacés,<br />lo que podés aportar.<br /><span
+            >Todo puede sumar.</span
+          >
+        </h2>
+        <div class="join-grid">
+          <article>
+            <span class="number">01</span>
+            <h3>Quiero aprender</h3>
+            <p>
+              Buscá tu punto de partida y conocé las próximas capacitaciones.
+            </p>
+            <a href="#capacitaciones">Explorar formación</a>
+          </article>
+          <article>
+            <span class="number">02</span>
+            <h3>Quiero ser voluntario</h3>
+            <p>
+              Acercá tus conocimientos y conversá con el equipo sobre cómo
+              participar.
+            </p>
+            <a
+              data-contact="Hola Pakova, me gustaría colaborar como voluntario. ¿Cómo puedo sumarme?"
+              href="https://wa.me/5493416206812"
+              >Sumarme al equipo</a
+            >
+          </article>
+          <article>
+            <span class="number">03</span>
+            <h3>Somos una empresa</h3>
+            <p>
+              Exploremos formas de acompañar la formación tecnológica de la
+              comunidad.
+            </p>
+            <a
+              data-contact="Hola Pakova, represento a una empresa y nos gustaría conversar sobre cómo colaborar."
+              href="https://wa.me/5493416206812"
+              >Conversar sobre una alianza</a
+            >
+          </article>
+          <article>
+            <span class="number">04</span>
+            <h3>Somos una organización</h3>
+            <p>
+              Conectemos tu espacio con nuevas oportunidades de aprendizaje.
+            </p>
+            <a
+              data-contact="Hola Pakova, somos una organización y queremos conversar sobre actividades en nuestra comunidad."
+              href="https://wa.me/5493416206812"
+              >Acercar una propuesta</a
+            >
+          </article>
+        </div>
+      </section>
+      <section class="section faq">
+        <div>
+          <p class="eyebrow">ANTES DE EMPEZAR</p>
+          <h2>¿Te quedó<br />alguna duda?</h2>
+        </div>
+        <div>
+          <details>
+            <summary>¿Las capacitaciones tienen costo?</summary>
+            <p>
+              La formación que brinda Pakova es gratuita. Consultá al equipo qué
+              actividades están disponibles.
+            </p>
+          </details>
+          <details>
+            <summary>¿Necesito conocimientos previos?</summary>
+            <p>
+              Los requisitos dependen de cada actividad. Contanos qué
+              experiencia tenés para que el equipo pueda orientarte.
+            </p>
+          </details>
+          <details>
+            <summary>¿Dónde se realizan las actividades?</summary>
+            <p>
+              Pakova trabaja en distintos centros comunitarios de Rosario. La
+              sede y los horarios se confirman para cada propuesta.
+            </p>
+          </details>
+          <details>
+            <summary>¿Cómo me inscribo?</summary>
+            <p>
+              Escribí al equipo por WhatsApp o correo para conocer las
+              convocatorias y el proceso de inscripción. Una consulta no reserva
+              una vacante.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="contact section" id="contacto">
+        <div>
+          <p class="eyebrow">HABLEMOS</p>
+          <h2>Una conversación<br />puede ser el comienzo.</h2>
+          <a
+            class="button yellow"
+            data-contact="Hola Pakova, quisiera hacerles una consulta."
+            href="https://wa.me/5493416206812"
+            >Escribir por WhatsApp</a
+          ><a class="email" href="mailto:pakovatesting@gmail.com"
+            >pakovatesting@gmail.com</a
+          >
+          <p class="address">
+            Córdoba 1330 · Piso 7, departamento 1<br />Rosario, Santa Fe
+          </p>
+          <a
+            class="text-link"
+            href="https://www.google.com/maps/search/?api=1&amp;query=Cordoba+1330+Rosario+Santa+Fe"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Ver ubicación en Google Maps</a
+          >
+          <form id="consulta-form" class="contact-form">
+            <label for="nombre">Tu nombre</label
+            ><input
+              id="nombre"
+              name="nombre"
+              required
+              autocomplete="name"
+            /><label for="mensaje">¿Qué querés consultar?</label
+            ><textarea id="mensaje" name="mensaje" rows="3" required></textarea
+            ><button class="button yellow" type="submit">
+              Enviar consulta por WhatsApp
+            </button>
+          </form>
+        </div>
+        <figure>
+          <img
+            src="assets/oficina.avif"
+            loading="lazy"
+            alt="Oficina de Pakova en Rosario"
+            width="640"
+            height="480"
+          />
+          <figcaption>
+            Un espacio para encontrarnos. Coordiná tu visita con el equipo.
+          </figcaption>
+          <iframe
+            class="map"
+            title="Mapa de la oficina Pakova"
+            loading="lazy"
+            src="https://www.google.com/maps?q=Córdoba%201330%20Rosario%20Santa%20Fe&output=embed"
+          ></iframe>
+        </figure>
+      </section>
+      <section class="media section" id="galeria">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PAKOVA EN ACCIÓN</p>
+            <h2>La tecnología<br /><span>se aprende acompañados.</span></h2>
+          </div>
+          <p>
+            Pakova conecta personas, organizaciones y empresas para que aprender
+            informática se convierta en una oportunidad concreta.
+          </p>
+        </div>
+        <div class="media-grid">
+          <figure>
+            <img
+              src="assets/oficina.avif"
+              alt="Personas aprendiendo en la oficina de Pakova"
+            />
+            <figcaption>
+              <strong>01 · Un lugar para aprender</strong><br />Oficina Pakova ·
+              Córdoba 1330
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="assets/logo-NAN.avif"
+              alt="Logo de NAN Fuego del Sol, organización aliada"
+            />
+            <figcaption>
+              <strong>02 · Una red que acompaña</strong><br />Trabajamos junto a
+              organizaciones de Rosario
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="assets/vecinal_san_martin.avif"
+              alt="Logo de Unión Vecinal San Martín A"
+            />
+            <figcaption>
+              <strong>03 · El aula llega al barrio</strong><br />Formación en
+              espacios comunitarios
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="assets/pakova.jpg"
+              alt="Logo de Pakova con banana y circuitos"
+            />
+            <figcaption>
+              <strong>04 · Aprender abre caminos</strong><br />Más herramientas
+              para estudiar y trabajar
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="idea section" id="idea">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">NUESTRA IDEA</p>
+            <h2>Aprender puede<br /><span>cambiar una vida.</span></h2>
+          </div>
+          <p>
+            En Pakova abrimos las puertas a personas de todas las edades con
+            formación gratuita y accesible en computación.
+          </p>
+        </div>
+        <div class="learning-grid">
+          <article class="feature-card">
+            <div class="tag">ACOMPAÑAMIENTO</div>
+            <h3>Mucho más que una clase.</h3>
+            <p>
+              Cada persona encuentra confianza, comunidad y acompañamiento para
+              crecer. Organizamos talleres, mentorías y espacios de encuentro.
+            </p>
+          </article>
+          <article class="next-card">
+            <div class="tag">OPORTUNIDADES</div>
+            <h3>Del aprendizaje a la acción.</h3>
+            <p>
+              Transformamos habilidades digitales en herramientas para estudiar,
+              trabajar y construir un futuro con más posibilidades.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="courses section" id="cursos">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">04 / CURSOS</p>
+            <h2>
+              Aprendé habilidades<br /><span>para el mundo digital.</span>
+            </h2>
+          </div>
+          <p>
+            Capacitaciones gratuitas, con acompañamiento y práctica. Las fechas,
+            sedes y horarios se confirman en cada convocatoria.
+          </p>
+        </div>
+        <div class="course-grid">
+          <article>
+            <span>01</span>
+            <h3>Testing Manual</h3>
+            <p>
+              Fundamentos de QA, ciclo de vida, casos de prueba, reportes de
+              errores y metodologías ágiles.
+            </p>
+            <a class="text-link" href="https://wa.me/5493416206812"
+              >Consultar curso →</a
+            >
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Testing de Videojuegos</h3>
+            <p>
+              Análisis de bugs, jugabilidad, rendimiento, experiencia de usuario
+              y compatibilidad.
+            </p>
+            <a class="text-link" href="https://wa.me/5493416206812"
+              >Consultar curso →</a
+            >
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Alfabetización Digital</h3>
+            <p>
+              Computadora, internet, correo, archivos, herramientas de oficina y
+              seguridad digital.
+            </p>
+            <a class="text-link" href="https://wa.me/5493416206812"
+              >Consultar curso →</a
+            >
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Programación Básica</h3>
+            <p>
+              Pensamiento lógico, variables, condicionales, bucles, funciones y
+              algoritmos simples.
+            </p>
+            <a class="text-link" href="https://wa.me/5493416206812"
+              >Consultar curso →</a
+            >
+          </article>
+        </div>
+        <div class="upcoming">
+          <strong>Próximos cursos:</strong> Testing con inteligencia artificial
+          · Python para automatización · Java con Spring Boot.
+        </div>
+      </section>
+      <section class="tools section" id="herramientas">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">¿ERES PARTE?</p>
+            <h2>Herramientas<br /><span>de la comunidad.</span></h2>
+          </div>
+          <p>
+            Si ya participás de Pakova, accedé a las plataformas que usamos para
+            aprender, practicar y organizar proyectos.
+          </p>
+        </div>
+        <div class="course-grid">
+          <article>
+            <span>01</span>
+            <h3>SquashTM</h3>
+            <p>Gestión y seguimiento de pruebas.</p>
+            <a href="https://squash.pakova.org/squash" target="_blank"
+              >Acceder a Squash →</a
+            >
+          </article>
+          <article>
+            <span>02</span>
+            <h3>MantisBT</h3>
+            <p>Organización y seguimiento de incidencias.</p>
+            <a href="https://mantis.pakova.org" target="_blank"
+              >Acceder a MantisBT →</a
+            >
+          </article>
+          <article>
+            <span>03</span>
+            <h3>TestLink</h3>
+            <p>Planificación y documentación de casos de prueba.</p>
+            <a href="https://testlink.pakova.org" target="_blank"
+              >Acceder a TestLink →</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <a class="wordmark" href="#inicio">PAKOVA</a>
+        <p>Tecnología que abre oportunidades.</p>
+      </div>
+      <div>
+        <a
+          href="https://www.instagram.com/pakova.ong/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Instagram</a
+        ><a
+          href="https://www.facebook.com/PakovaTesting"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Facebook</a
+        ><a
+          href="https://www.linkedin.com/company/pakova-testing"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+      </div>
+      <details>
+        <summary>Herramientas de la comunidad</summary>
+        <a
+          href="https://squash.pakova.org/squash"
+          target="_blank"
+          rel="noopener noreferrer"
+          >SquashTM</a
+        ><a
+          href="https://mantis.pakova.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          >MantisBT</a
+        ><a
+          href="https://testlink.pakova.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TestLink</a
+        >
+      </details>
+      <small>© 2026 Pakova · Asociación civil sin fines de lucro</small>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
