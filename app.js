@@ -1,0 +1,147 @@
+const menu = document.querySelector(".menu");
+const nav = document.querySelector("#nav");
+const heroTitle = document.querySelector(".hero h1");
+if (heroTitle)
+  heroTitle.innerHTML =
+    "Capacitación tecnológica gratuita<br><span>para abrir nuevas oportunidades.</span>";
+const heroIntro = document.querySelector(".hero .intro");
+if (heroIntro)
+  heroIntro.textContent =
+    "Pakova acompaña a personas de Rosario que quieren aprender informática, acercarse al mundo IT y crecer junto a su comunidad.";
+const learningEyebrow = document.querySelector("#capacitaciones .eyebrow");
+if (learningEyebrow) learningEyebrow.textContent = "01 / QUÉ HACEMOS";
+const learningTitle = document.querySelector("#capacitaciones h2");
+if (learningTitle)
+  learningTitle.innerHTML = "Aprendé tecnología<br>desde tu comunidad.";
+const history = document.querySelector("#historia");
+if (history) {
+  const extra = document.createElement("section");
+  extra.className = "section";
+  extra.id = "mision";
+  extra.innerHTML =
+    '<div class="section-heading"><div><p class="eyebrow">NUESTRO PROPÓSITO</p><h2>La inclusión digital<br>también abre puertas.</h2></div><p>Trabajamos para que más jóvenes puedan acceder a formación, herramientas concretas y oportunidades reales en el sector tecnológico.</p></div><div class="learning-grid"><article class="feature-card"><div class="tag">MISIÓN</div><h3>Formación que se transforma en oportunidades.</h3><p>Brindamos capacitación en oficios y competencias digitales, de manera presencial en Rosario, en el territorio y también en modalidad virtual. Construimos puentes con organizaciones sociales y empresas del ecosistema tecnológico.</p></article><article class="next-card"><div class="tag">NUESTRA HISTORIA</div><h3>Un proyecto que sigue creciendo.</h3><p>Pakova nació en 2022 y se constituyó formalmente como asociación civil en 2023. Lo que comenzó con dos personas fundadoras hoy reúne a un equipo de 12 colaboradores.</p></article></div>';
+  history.before(extra);
+}
+const iconSvgs = [
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18"/></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5m0 14h16M8 15l3-4 3 2 5-7"/></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3"/><path d="M5 21c.7-3.5 3-5 7-5s6.3 1.5 7 5"/></svg>',
+  '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5 12 4l8 15.5M7 14h10"/></svg>',
+];
+document.querySelectorAll(".join-grid article").forEach((card, index) => {
+  const badge = document.createElement("span");
+  badge.className = "premium-icon";
+  badge.style.cssText =
+    "display:grid;place-items:center;width:46px;height:46px;border:1px solid #f1d442;border-radius:50%;color:#f1d442;margin-bottom:24px";
+  badge.innerHTML = iconSvgs[index] || iconSvgs[0];
+  card.prepend(badge);
+});
+document.querySelectorAll(".feature-card,.next-card").forEach((card, index) => {
+  if (card.querySelector(".premium-icon")) return;
+  const badge = document.createElement("span");
+  badge.className = "premium-icon small";
+  badge.style.cssText =
+    "display:grid;place-items:center;width:40px;height:40px;border:1px solid #151715;border-radius:50%;color:#151715;margin-bottom:20px";
+  badge.innerHTML = iconSvgs[index + 1] || iconSvgs[0];
+  card.prepend(badge);
+});
+document.querySelectorAll(".premium-icon svg").forEach((svg) => {
+  svg.style.cssText =
+    "width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round";
+});
+const slogan = document.querySelector(".manifesto p");
+if (slogan) slogan.textContent = "Aprender. Conectar. Avanzar.";
+const socialIcons = {
+  Instagram:
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>',
+  Facebook:
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-3H14V8.2c0-1 .3-1.7 1.8-1.7H18V3.2c-.4 0-1.4-.2-2.7-.2C12.6 3 11 4.6 11 7.3V10H8v3h3v8"/></svg>',
+  LinkedIn:
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 10v6M8 7.5v.1M12 16v-3.2a2.8 2.8 0 0 1 5.5 0V16M12 10v6"/></svg>',
+};
+document.querySelectorAll("footer a").forEach((link) => {
+  const key = link.textContent.trim();
+  if (!socialIcons[key]) return;
+  const icon = document.createElement("span");
+  icon.innerHTML = socialIcons[key];
+  icon.style.cssText =
+    "display:inline-grid;place-items:center;width:30px;height:30px;border:1px solid currentColor;border-radius:50%;margin-right:8px;vertical-align:middle";
+  icon.firstElementChild.style.cssText =
+    "width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round";
+  link.prepend(icon);
+  link.style.cssText = "display:flex;align-items:center;gap:4px";
+});
+const brandStyle = document.createElement("style");
+brandStyle.textContent = `:root{--ink:#000000;--yellow:#ffd600;--paper:#111111;--muted:#f4f4f4;--line:#3a3a3a}body{background:#111;color:#fff;font-family:'Arial Narrow','Trebuchet MS',Arial,sans-serif}h1{font-family:'Arial Narrow','Trebuchet MS',Arial,sans-serif;font-size:clamp(32px,4.7vw,58px);font-weight:700;letter-spacing:-1.5px}h2{font-family:'Arial Narrow','Trebuchet MS',Arial,sans-serif;font-size:clamp(30px,3.4vw,36px);font-weight:700;letter-spacing:-1px}h3{font-family:'Arial Narrow','Trebuchet MS',Arial,sans-serif;font-size:24px;font-weight:700}.wordmark{font-family:'Arial Narrow','Trebuchet MS',Arial,sans-serif;font-size:32px;letter-spacing:-1px;color:#fff}header{background:#111;border-color:#3a3a3a}nav a,.nav-cta{color:#fff}.nav-cta{border-color:#fff}.intro,.section-heading>p,.feature-card p,.next-card p,.story p,.join-grid p,.address,figcaption{color:#f4f4f4}.yellow,.manifesto{background:#ffd600;color:#000}.outline{border-color:#fff;color:#fff}.feature-card{background:#151515;border-color:#555;color:#fff}.next-card{background:#ffd600;color:#000}.next-card p{color:#000}.tag,.course-meta span{background:#222;color:#fff;border-color:#555}.story-note{background:#ffd600;color:#000}.join{background:#000;color:#fff}.faq,.contact{border-color:#3a3a3a}.brand-panel{background:#000}.partners{border-color:#3a3a3a}.partners>span{border-color:#3a3a3a;color:#f4f4f4}.partners strong{color:#fff}footer{background:#000;color:#fff;border-top:1px solid #3a3a3a}footer p,footer a,footer small{color:#f4f4f4}`;
+document.head.appendChild(brandStyle);
+function closeMenu() {
+  nav.classList.remove("open");
+  menu.setAttribute("aria-expanded", "false");
+}
+menu.addEventListener("click", () => {
+  const open = menu.getAttribute("aria-expanded") !== "true";
+  menu.setAttribute("aria-expanded", String(open));
+  nav.classList.toggle("open", open);
+});
+nav.addEventListener("click", (event) => {
+  if (event.target.closest("a")) closeMenu();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && nav.classList.contains("open")) {
+    closeMenu();
+    menu.focus();
+  }
+});
+document.querySelectorAll("[data-contact]").forEach((link) => {
+  link.href =
+    "https://wa.me/5493416206812?text=" +
+    encodeURIComponent(link.dataset.contact);
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+});
+const partnerAssets = [
+  "logo-NAN.avif",
+  "vecinal_san_martin.avif",
+  "creciendo.avif",
+  "biblioteca_empalme_norte.avif",
+  "vecinal_antartida.avif",
+  "vecinal_decendiantes_de_victoria.avif",
+];
+document.querySelectorAll(".partners>span").forEach((partner, index) => {
+  const image = document.createElement("img");
+  image.src = "assets/" + partnerAssets[index];
+  image.alt = "Logo de " + partner.textContent.trim();
+  image.style.cssText =
+    "width:58px;height:48px;object-fit:contain;object-position:left center;display:block;margin-bottom:12px";
+  partner.prepend(image);
+});
+document.querySelectorAll("footer details a").forEach((link, index) => {
+  const icons = [
+    "logo_squash_icon.png",
+    "mantis-logo.webp",
+    "testlink-logo.webp",
+  ];
+  if (!icons[index]) return;
+  link.classList.add("tool");
+  link.style.cssText =
+    "display:inline-flex;align-items:center;gap:7px;margin-right:15px";
+  const image = document.createElement("img");
+  image.src = "assets/" + icons[index];
+  image.alt = "";
+  image.style.cssText = "width:22px;height:22px;object-fit:contain";
+  link.prepend(image);
+});
+
+const consultaForm = document.querySelector("#consulta-form");
+if (consultaForm) {
+  consultaForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const n = document.querySelector("#nombre").value.trim(),
+      m = document.querySelector("#mensaje").value.trim();
+    window.open(
+      "https://wa.me/5493416206812?text=" +
+        encodeURIComponent("Hola Pakova, soy " + n + ". " + m),
+      "_blank",
+    );
+  });
+}
