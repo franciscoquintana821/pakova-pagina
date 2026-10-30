@@ -145,3 +145,88 @@ if (consultaForm) {
     );
   });
 }
+
+/* Menú flotante: accesos directos a donaciones y comunidad */
+(() => {
+  const root = document.querySelector("#pk-sumate");
+  const toggle = document.querySelector("#pk-sumate-toggle");
+  const menu = document.querySelector("#pk-sumate-menu");
+  if (!root || !toggle || !menu) return;
+
+  const items = Array.from(menu.querySelectorAll(".pk-sumate__item"));
+  let menuOpen = false;
+
+  const setMenuOpen = (open, focusFirst = false) => {
+    menuOpen = open;
+    toggle.setAttribute("aria-expanded", String(open));
+    menu.classList.toggle("is-open", open);
+    if (open) {
+      menu.removeAttribute("inert");
+      menu.setAttribute("aria-hidden", "false");
+      items.forEach((item) => item.removeAttribute("tabindex"));
+      if (focusFirst && items[0]) items[0].focus();
+    } else {
+      menu.setAttribute("inert", "");
+      menu.setAttribute("aria-hidden", "true");
+      items.forEach((item) => item.setAttribute("tabindex", "-1"));
+    }
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const viaKeyboard = event.detail === 0;
+    setMenuOpen(!menuOpen, !menuOpen && viaKeyboard);
+  });
+
+  toggle.addEventListener("keydown", (event) => {
+    if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+    event.preventDefault();
+    setMenuOpen(true, false);
+    const target = event.key === "ArrowDown" ? items[0] : items[items.length - 1];
+    if (target) target.focus();
+  });
+
+  document.addEventListener("click", (event) => {
+    if (menuOpen && !root.contains(event.target)) setMenuOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menuOpen) {
+      setMenuOpen(false);
+      toggle.focus();
+    }
+  });
+
+  root.addEventListener("focusout", (event) => {
+    if (!menuOpen) return;
+    if (!root.contains(event.relatedTarget)) setMenuOpen(false);
+  });
+
+  menu.addEventListener("keydown", (event) => {
+    const index = items.indexOf(document.activeElement);
+    if (event.key === "Escape") {
+      event.preventDefault();
+      setMenuOpen(false);
+      toggle.focus();
+      return;
+    }
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      const direction = event.key === "ArrowDown" ? 1 : -1;
+      const next = (index + direction + items.length) % items.length;
+      items[next].focus();
+    }
+    if (event.key === "Home") {
+      event.preventDefault();
+      items[0].focus();
+    }
+    if (event.key === "End") {
+      event.preventDefault();
+      items[items.length - 1].focus();
+    }
+  });
+
+  items.forEach((item) => {
+    item.addEventListener("click", () => setMenuOpen(false));
+  });
+})();
