@@ -145,3 +145,50 @@ if (consultaForm) {
     );
   });
 }
+const mensajes = {
+    "Asociación Civil NAN Fuego del Sol": {
+        dias: "Lunes y miércoles",
+        horario: "09:00 a 12:00 hs"
+    },
+
+    "Unión Vecinal San Martín A": {
+        dias: "Martes y jueves",
+        horario: "14:00 a 18:00 hs"
+    },
+
+    "Creciendo en Comunidad": {
+        dias: "Lunes a viernes",
+        horario: "08:00 a 16:00 hs"
+    },
+
+    "Biblioteca Popular Empalme Norte": {
+        dias: "Miércoles y viernes",
+        horario: "10:00 a 17:00 hs"
+    },
+
+    "Vecinal Antártida": {
+        dias: "Martes y sábados",
+        horario: "09:00 a 13:00 hs"
+    },
+
+    "Vecinal Descendientes de Victoria": {
+        dias: "Jueves y viernes",
+        horario: "15:00 a 19:00 hs"
+    }
+};
+
+function mostrarPopup(nombre) {
+    const info = mensajes[nombre];
+
+    document.getElementById("popup-mensaje").textContent =
+        info ? info.dias : "Días no disponibles.";
+
+    document.getElementById("popup-horario").textContent =
+        info ? info.horario : "Horario no disponible.";
+
+    document.getElementById("popup").style.display = "flex";
+}
+
+function cerrarPopup() {
+    document.getElementById("popup").style.display = "none";
+}

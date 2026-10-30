@@ -543,6 +543,7 @@
           margin-left: 0;
         }
       }
+      
     </style>
   </head>
   <body>
@@ -711,14 +712,25 @@
           </p>
         </div>
         <div class="partners">
-          <span>Asociación Civil<br /><strong>NAN Fuego del Sol</strong></span
-          ><span>Unión Vecinal<br /><strong>San Martín A</strong></span
-          ><span
-            ><strong>Creciendo<br />en Comunidad</strong></span
-          ><span>Biblioteca Popular<br /><strong>Empalme Norte</strong></span
-          ><span>Vecinal<br /><strong>Antártida</strong></span
-          ><span>Vecinal<br /><strong>Descendientes de Victoria</strong></span>
+          <span onclick="mostrarPopup('Asociación Civil NAN Fuego del Sol')">Asociación Civil<br /><strong>NAN Fuego del Sol</strong></span
+          ><span onclick="mostrarPopup('Unión Vecinal San Martín A')">Unión Vecinal<br /><strong>San Martín A</strong></span
+          ><span onclick="mostrarPopup('Creciendo en Comunidad')">
+            <strong>Creciendo<br />en Comunidad</strong>
+          </span
+          ><span onclick="mostrarPopup('Biblioteca Popular Empalme Norte')">Biblioteca Popular<br /><strong>Empalme Norte</strong></span
+          ><span onclick="mostrarPopup('Vecinal Antártida')">Vecinal<br /><strong>Antártida</strong></span
+          ><span onclick="mostrarPopup('Vecinal Descendientes de Victoria')">Vecinal<br /><strong>Descendientes de Victoria</strong></span>
         </div>
+<div id="popup" class="popup">
+    <div class="popup-contenido">
+        <span class="cerrar" onclick="cerrarPopup()">&times;</span>
+            <h2>Días:</h2>
+    <p id="popup-mensaje"></p>
+
+    <h2>Horario:</h2>
+    <p id="popup-horario"></p>
+    </div>
+</div>
       </section>
       <section class="join section" id="sumate">
         <p class="eyebrow">04 / SER PARTE</p>
