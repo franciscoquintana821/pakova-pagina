@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///C:/Users/Pakova/Desktop/segunda%20pesta%C3%B1a/index.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testing de Videojuegos | Pakova</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080909;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+header {
+    height: 75px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292d2b;
+}
+
+.logo {
+    color: #f5d84e;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+header a {
+    color: #d8d8d8;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* PORTADA */
+
+
+
+
+.categoria {
+    display: inline-block;
+    color: #f5d84e;
+    border: 1px solid #806d00;
+    border-radius: 30px;
+    padding: 9px 17px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(35px, 5vw, 65px);
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    color: #aeb5b2;
+    font-size: 19px;
+    line-height: 1.5;
+    max-width: 700px;
+}
+
+/* DATOS */
+
+.datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.dato {
+    background: #191c1b;
+    padding: 13px 17px;
+    border-radius: 30px;
+    color: #d5d8d6;
+    font-size: 14px;
+}
+
+/* BOTONES */
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 17px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.boton-amarillo {
+    background: #f5d84e;
+    color: #151515;
+}
+
+.boton-negro {
+    border: 1px solid #777;
+    color: white;
+}
+
+/* ILUSTRACION */
+
+
+
+
+
+/* CURSOS */
+
+.contenido {
+    padding: 35px 5%;
+}
+
+.titulo-seccion {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    color: #9ba29e;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+/* TARJETAS */
+
+.modulos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.modulo {
+    background: linear-gradient(
+        145deg,
+        #191c1b,
+        #111313
+    );
+
+    border: 1px solid #343836;
+    border-radius: 22px;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.icono {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #222625;
+    border: 1px solid #383d3a;
+    border-radius: 50%;
+
+    font-size: 35px;
+}
+
+.modulo-contenido {
+    flex: 1;
+}
+
+.numero {
+    color: #f5d84e;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modulo h3 {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.modulo p {
+    color: #b4bbb7;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.flecha {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #635500;
+    border-radius: 50%;
+
+    color: white;
+    font-size: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #292d2b;
+    padding: 30px;
+    text-align: center;
+    color: #777e7a;
+}
+
+/* RESPONSIVE */
+/* PORTADA */
+
+.hero {
+    width: 100%;
+    min-height: 420px;
+    padding: 45px 6%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-bottom: 1px solid #292d2b;
+}
+
+.hero-contenido {
+    flex: 1;
+    max-width: 65%;
+}
+
+.hero-imagen {
+    flex: 0 0 38%;
+    height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-imagen img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .hero-contenido {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero-imagen {
+        width: 100%;
+        flex: none;
+        height: 300px;
+    }
+
+}
+
+
+
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+
+    .contenido {
+        padding: 30px 20px;
+    }
+
+    .modulo {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .icono {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+        font-size: 25px;
+    }
+
+    .modulo h3 {
+        font-size: 17px;
+    }
+
+    .modulo p {
+        font-size: 13px;
+    }
+
+    .flecha {
+        display: none;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">PAKOVA</div>
+    <a href="file:///C:/Users/Pakova/Desktop/segunda%20pesta%C3%B1a/cursos.html">← Volver a cursos</a>
+</header>
+
+<section class="hero">
+
+    <div class="hero-contenido">
+
+        <div class="categoria">
+            QA · GAMING
+        </div>
+
+        <h1>Testing de Videojuegos</h1>
+
+        <p class="descripcion">
+            Probá juegos con mirada crítica, detectá fallas
+            y mejorá la experiencia de quienes juegan.
+        </p>
+
+        <div class="datos">
+            <div class="dato">🎮 Testing de videojuegos</div>
+            <div class="dato">🟡 Gratuito</div>
+            <div class="dato">📊 Nivel inicial</div>
+            <div class="dato">📦 5 módulos</div>
+        </div>
+
+        <div class="botones">
+            <a href="file:///C:/Users/Pakova/Desktop/segunda%20pesta%C3%B1a/index.html#" class="boton boton-amarillo">
+                Explorar módulos →
+            </a>
+
+            <a href="file:///C:/Users/Pakova/Desktop/segunda%20pesta%C3%B1a/cursos.html" class="boton boton-negro">
+                Volver
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-imagen">
+        <img src="mando.png" alt="Mando de videojuegos">
+    </div>
+
+</section>
+
+<section class="contenido">
+
+    <h2 class="titulo-seccion">
+        Contenido del curso
+    </h2>
+
+    <p class="subtitulo">
+        Conocé qué vas a aprender en cada módulo.
+    </p>
+
+    <div class="modulos">
+
+        <article class="modulo">
+
+            <div class="icono">🔍</div>
+
+            <div class="modulo-contenido">
+
+                <div class="numero">MÓDULO 01</div>
+
+                <h3>Introducción al Testing de Videojuegos</h3>
+
+                <p>
+                    Conocé los fundamentos del testing, su importancia
+                    y el rol del tester en la industria de los videojuegos.
+                </p>
+
+            </div>
+
+            <div class="flecha">›</div>
+
+        </article>
+
+        <article class="modulo">
+
+            <div class="icono">⚙️</div>
+
+            <div class="modulo-contenido">
+
+                <div class="numero">MÓDULO 02</div>
+
+                <h3>Identificación de Bugs</h3>
+
+                <p>
+                    Aprendé a detectar errores, fallas de jugabilidad 
+                    y comportamientos inesperados dentro de un videojuego.
+                </p>
+
+            </div>
+
+            <div class="flecha">›</div>
+
+        </article>
+
+        <article class="modulo">
+
+            <div class="icono">🎮</div>
+
+            <div class="modulo-contenido">
+
+                <div class="numero">MÓDULO 03</div>
+
+                <h3>Pruebas de Videojuegos</h3>
+
+                <p>
+                    Explorá cómo probar controles, niveles, interfaces
+                    y mecánicas para garantizar su correcto funcionamiento.
+                </p>
+
+            </div>
+
+            <div class="flecha">›</div>
+
+        </article>
+
+        <article class="modulo">
+
+            <div class="icono">⚠️</div>
+
+            <div class="modulo-contenido">
+
+                <div class="numero">MÓDULO 04</div>
+
+                <h3>Creación de Casos de Prueba</h3>
+
+                <p>
+                    Aprendé a diseñar casos de prueba para comprobar 
+                    diferentes funcionalidades y situaciones dentro de un juego.
+                </p>
+
+            </div>
+
+            <div class="flecha">›</div>
+
+        </article>
+
+        <article class="modulo">
+
+            <div class="icono">🏆</div>
+
+            <div class="modulo-contenido">
+
+                <div class="numero">MÓDULO 05</div>
+
+                <h3>Reporte y Documentación de Errores</h3>
+
+                <p>
+                    Descubrí cómo documentar errores 
+                    y evaluar la experiencia del usuario y del jugador.
+                </p>
+
+            </div>
+
+            <div class="flecha">›</div>
+
+        </article>
+        <article class="modulo">
+
+            <div class="icono">⚙️</div>
+
+            <div class="modulo-contenido">
+
+                <div class="numero">MÓDULO 06</div>
+
+                <h3>Experiencia del Usuario y del Jugador</h3>
+
+                <p>
+                     Evaluá la experiencia de juego, identificá problemas
+                    de usabilidad y aprendé a mejorar la experiencia del jugador.
+                </p>
+
+            </div>
+
+            <div class="flecha">›</div>
+
+        </article>
+    </div>
+
+</section>
+
+<footer>
+    Pakova Testing · Aprendé, practicá y crecé.
+</footer>
+
+
+
+```
+</body></html>
