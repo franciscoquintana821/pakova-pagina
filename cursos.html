@@ -1,0 +1,164 @@
+<!--
+  =============================================================================
+  SECCIÓN CURSOS · Pakova
+  -----------------------------------------------------------------------------
+  Pegá este bloque en index.html, en el lugar de la sección Cursos.
+
+  Además, agregá en el <head> de index.html:
+    <link rel="stylesheet" href="cursos.css">
+    <script src="cursos.js" defer></script>
+
+  Es la sección 6 de la página. Para llegar desde la barra de
+  navegación, el botón "6" tiene que ser un link a #cursos:
+    <a href="#cursos">6</a>
+
+  Las tarjetas las arma cursos.js con los datos de su sección 2.
+  El botón "Ver el curso" lleva a la página de cada curso
+  (se configura en cursos.js, CONFIG.paginaDelCurso).
+  =============================================================================
+-->
+
+<link rel="stylesheet" href="cursos.css">
+<script src="cursos.js" defer></script>
+
+<!-- Sección 6 · destino del link "#cursos" de la barra de navegación -->
+<section class="pk-cursos" id="cursos" aria-labelledby="cursos-titulo">
+
+  <!-- Encabezado -->
+  <div class="pk-head">
+    <div>
+      <p class="pk-eyebrow">6 / Cursos</p>
+      <h2 class="pk-head__title" id="cursos-titulo">
+        Aprender abre puertas,<br>
+        <span>la tecnología abre mundos.</span>
+      </h2>
+    </div>
+
+    <div>
+      <p class="pk-text">
+        Capacitaciones gratuitas, con acompañamiento y práctica.
+        Abrí cada curso para ver en detalle de qué se trata,
+        qué vas a aprender y para quién es.
+      </p>
+
+      <ul class="pk-pills" aria-label="Qué incluyen los cursos">
+        <li>100% gratuitos</li>
+        <li>Con acompañamiento</li>
+        <li>Práctica real</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!--
+    Carrusel / abanico de cursos.
+    En celular y tablet se ve como carrusel; en computadora con mouse,
+    como abanico (ver cursos.css, sección 4). Las tarjetas, los puntitos,
+    el contador y el texto de la pista los completa cursos.js.
+  -->
+  <div class="pk-slider" id="pk-slider">
+
+    <!-- Tarjetas (cursos.js, sección 6) -->
+    <div
+      class="pk-grid"
+      id="pk-lista"
+      role="region"
+      aria-roledescription="carrusel"
+      aria-label="Cursos disponibles"
+      tabindex="0"
+    ></div>
+
+    <!-- Flecha izquierda -->
+    <button
+      class="pk-slider__arrow pk-slider__arrow--prev"
+      type="button"
+      data-mover="-1"
+      aria-label="Curso anterior"
+    >
+      <svg class="pk-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M15 6l-6 6 6 6"/>
+      </svg>
+    </button>
+
+    <!-- Puntitos y contador ("Curso 3 de 5") -->
+    <div class="pk-slider__status">
+      <div class="pk-slider__dots" id="pk-puntitos"></div>
+      <p class="pk-slider__count" id="pk-contador" aria-live="polite"></p>
+    </div>
+
+    <!-- Flecha derecha -->
+    <button
+      class="pk-slider__arrow pk-slider__arrow--next"
+      type="button"
+      data-mover="1"
+      aria-label="Curso siguiente"
+    >
+      <svg class="pk-svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9 6l6 6-6 6"/>
+      </svg>
+    </button>
+
+    <!-- Pista para quien no sabe cómo usarlo (se oculta al primer uso) -->
+    <p class="pk-slider__hint" id="pk-pista">
+      <span class="pk-slider__hint-icon" aria-hidden="true">
+        <svg class="pk-svg" viewBox="0 0 24 24">
+          <path d="M8 7l-5 5 5 5M16 7l5 5-5 5M3 12h18"/>
+        </svg>
+      </span>
+      <span id="pk-pista-texto"></span>
+    </p>
+
+  </div>
+
+
+  <!-- Próximos cursos (la lista y la cinta los arma cursos.js) -->
+
+  <!--
+    Los cursos se muestran en una cinta que se desliza sola (ver
+    cursos.css, sección 5). Se frena al pasar el mouse.
+  -->
+  <div class="pk-next" id="pk-proximos">
+    <div>
+      <p class="pk-eyebrow">
+        <span class="pk-pulse" aria-hidden="true"></span>
+        Próximamente
+      </p>
+      <h3>Próximos cursos</h3>
+      <p class="pk-text">
+        Escribinos y te avisamos cuando abra la inscripción.
+      </p>
+
+      <a
+        class="pk-btn pk-btn--ghost"
+        id="pk-proximos-boton"
+        href="#"
+        target="_blank"
+        rel="noopener"
+      >
+        Avisame por WhatsApp
+      </a>
+    </div>
+
+    <!-- Cinta automática de próximos cursos -->
+    <div
+      class="pk-ticker"
+      id="pk-proximos-carrusel"
+      role="region"
+      aria-label="Próximos cursos"
+    >
+      <div class="pk-ticker__track">
+        <!-- La lista real -->
+        <ul class="pk-ticker__group" id="pk-proximos-lista"></ul>
+
+        <!-- Copia para que la cinta no tenga cortes (los lectores de
+             pantalla la saltean) -->
+        <ul
+          class="pk-ticker__group"
+          id="pk-proximos-copia"
+          aria-hidden="true"
+        ></ul>
+      </div>
+    </div>
+  </div>
+
+</section>

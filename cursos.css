@@ -1,0 +1,1244 @@
+/* =============================================================================
+   SECCIÓN CURSOS · Pakova
+   -----------------------------------------------------------------------------
+   Todas las clases empiezan con "pk-" para no chocar con el resto del sitio.
+
+   Índice:
+     1. Variables (colores y medidas)
+     2. Componentes reutilizables
+     3. Sección: encabezado
+     4. Sección: tarjetas de cursos
+     5. Sección: próximos cursos
+     6. Responsive
+     7. Modo claro
+     8. Accesibilidad
+   ========================================================================== */
+
+
+/* =============================================================================
+   1. VARIABLES
+   Cambiá acá los colores y medidas de toda la sección.
+   ========================================================================== */
+
+.pk-cursos {
+  --pk-yellow: #ffd600;
+  --pk-yellow-soft: rgba(255, 214, 0, 0.12);
+  --pk-yellow-line: rgba(255, 214, 0, 0.5);
+
+  --pk-bg: #000000;
+  --pk-surface: #141414;
+  --pk-line: rgba(255, 255, 255, 0.12);
+  --pk-text: #ffffff;
+  --pk-muted: #c9cfcb;
+
+  --pk-radius: 22px;
+  --pk-radius-sm: 14px;
+  --pk-max: 1240px;
+  --pk-gutter: clamp(16px, 5vw, 56px);
+}
+
+
+/* =============================================================================
+   2. COMPONENTES REUTILIZABLES
+   Se usan en las tarjetas y en la ventana de detalle.
+   ========================================================================== */
+
+/* --- Ícono SVG --- */
+.pk-svg {
+  width: 1.2em;
+  height: 1.2em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* --- Caja amarilla con el ícono del curso --- */
+.pk-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  background: var(--pk-yellow-soft);
+  color: var(--pk-yellow);
+  font-size: 22px;
+}
+
+/* --- Tarjeta base --- */
+.pk-card {
+  background: var(--pk-surface);
+  color: var(--pk-text);
+  border: 1px solid var(--pk-line);
+  border-radius: var(--pk-radius);
+}
+
+/* --- Botones (sirven para <a> y <button>) --- */
+.pk-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--pk-yellow);
+  color: #000;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.pk-btn:hover {
+  box-shadow: 0 0 0 4px rgba(255, 214, 0, 0.2);
+}
+
+.pk-btn .pk-svg {
+  transition: transform 0.2s;
+}
+
+.pk-btn:hover .pk-svg {
+  transform: translateX(3px);
+}
+
+.pk-btn--ghost {
+  background: transparent;
+  color: var(--pk-text);
+  border-color: var(--pk-line);
+}
+
+.pk-btn--ghost:hover {
+  box-shadow: none;
+  border-color: var(--pk-text);
+}
+
+.pk-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* --- Textos --- */
+.pk-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pk-yellow);
+}
+
+.pk-text {
+  margin: 0 0 16px;
+  max-width: 68ch;
+  color: var(--pk-muted);
+  font-size: 17px;
+}
+
+/* --- Etiqueta de nivel ("Desde cero", "Nivel inicial") --- */
+.pk-level {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 12px;
+  border: 1px solid var(--pk-yellow-line);
+  border-radius: 999px;
+  background: var(--pk-yellow-soft);
+  color: var(--pk-yellow);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.pk-level::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* --- Etiqueta amarilla de estado --- */
+.pk-status {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 0 0 12px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: var(--pk-yellow);
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* --- Listas en línea con punto amarillo --- */
+.pk-pills,
+.pk-dots {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pk-pills {
+  gap: 8px;
+}
+
+.pk-dots {
+  gap: 6px 16px;
+  margin-bottom: 26px;
+}
+
+.pk-pills li,
+.pk-dots li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--pk-text);
+}
+
+.pk-pills li {
+  padding: 7px 13px;
+  border: 1px solid var(--pk-line);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pk-dots li {
+  font-size: 14px;
+}
+
+.pk-pills li::before,
+.pk-dots li::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pk-yellow);
+}
+
+
+/* =============================================================================
+   3. SECCIÓN: ENCABEZADO
+   ========================================================================== */
+
+.pk-cursos {
+  padding: clamp(56px, 8vw, 96px) var(--pk-gutter);
+  background: var(--pk-bg);
+  color: var(--pk-text);
+
+  /* Para convivir con el resto de la página:
+     - isolation: los z-index de adentro (tarjetas, flechas) no compiten
+       con los de afuera, así nada se pone encima del menú del sitio.
+     - overflow-x: las tarjetas inclinadas del abanico no generan una
+       barra de desplazamiento horizontal en toda la página. */
+  isolation: isolate;
+  overflow-x: clip;
+
+  /* Al llegar con el link "#cursos" de la barra de navegación, deja este
+     espacio arriba. Si la página tiene un menú fijo arriba, poné su alto
+     en --pk-scroll-offset (en el CSS de la página, ej.: 80px). */
+  scroll-margin-top: var(--pk-scroll-offset, 24px);
+}
+
+.pk-cursos > * {
+  max-width: var(--pk-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pk-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 8%;
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.pk-head__title {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.08;
+}
+
+
+/* =============================================================================
+   4. SECCIÓN: TARJETAS DE CURSOS
+   -----------------------------------------------------------------------------
+   Las tarjetas se muestran de dos formas según el dispositivo:
+
+     CARRUSEL → celulares, tablets y cualquier pantalla táctil.
+                Se desliza con el dedo; la tarjeta del centro se destaca.
+     ABANICO  → computadoras con mouse y pantalla de 1360px o más.
+                Las tarjetas se abren en abanico; la elegida sube al frente.
+
+   Las dos usan las mismas tarjetas. cursos.js marca cuál está "activa"
+   (clase pk-activa) y le pasa a cada una su lugar en el abanico (--lugar).
+
+   4.1  Tarjeta
+   4.2  Ícono del curso
+   4.3  Carrusel
+   4.4  Abanico
+   4.5  Flechas, puntitos, contador y pista
+   4.5b Ayudas del abanico (flechas a los costados, "Clic para ver")
+   4.6  Animación de entrada
+   4.7  Animación al pasar el mouse
+   ========================================================================== */
+
+/* ---------- 4.1 Tarjeta ---------- */
+
+.pk-course {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  /* Solo se anima lo que el navegador puede mover con fluidez (transform).
+     El brillo y la sombra cambian al instante: animarlos obligaba a
+     repintar toda la tarjeta en cada paso y hacía que el abanico se
+     sintiera pesado. */
+  transition:
+    transform 0.42s cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 0.25s;
+}
+
+.pk-course.pk-activa {
+  border-color: rgba(255, 214, 0, 0.6);
+  box-shadow: 0 18px 40px rgba(255, 214, 0, 0.08);
+}
+
+/* Línea amarilla que se dibuja arriba en la tarjeta activa */
+.pk-course::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--pk-yellow);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+
+.pk-course.pk-activa::after {
+  transform: scaleX(1);
+}
+
+.pk-course__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.pk-course__title {
+  margin: 0 0 10px;
+  font-size: 24px;
+  line-height: 1.15;
+  color: var(--pk-text);
+}
+
+/* Parte destacada del título, por ejemplo "con IA" */
+.pk-course__title-accent {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--pk-yellow);
+  color: #000;
+  font-size: 0.62em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 0.08em;
+  white-space: nowrap;
+}
+
+.pk-course__text {
+  margin: 0 0 20px;
+  color: var(--pk-muted);
+  line-height: 1.55;
+}
+
+/* Empuja los botones al fondo de la tarjeta */
+.pk-course .pk-actions {
+  margin-top: auto;
+}
+
+/* Botones un poco más compactos para que entren en una línea */
+.pk-course .pk-btn {
+  padding: 12px 18px;
+}
+
+
+/* ---------- 4.2 Ícono del curso ---------- */
+
+.pk-course .pk-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0;
+  border-radius: 20px;
+  background: var(--pk-yellow);
+  color: #000;
+  font-size: 28px;
+  transition: transform 0.35s;
+}
+
+.pk-course .pk-icon .pk-svg {
+  stroke-width: 2;
+}
+
+
+/* ---------- 4.3 Carrusel ----------
+   Es la forma por defecto. Las tarjetas van en una fila que se desliza
+   y siempre frenan centradas (scroll-snap). Las de los costados se ven
+   más chicas y apagadas.
+*/
+
+.pk-grid {
+  /* Ancho de cada tarjeta. En celular deja asomar las de los costados,
+     así se nota que se puede deslizar. */
+  --pk-card-w: min(340px, calc(100vw - 112px));
+
+  position: relative;    /* así cursos.js mide las tarjetas desde acá */
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 16px calc((100% - var(--pk-card-w)) / 2) 24px;
+  scrollbar-width: none;           /* oculta la barra en Firefox */
+}
+
+.pk-grid::-webkit-scrollbar {
+  display: none;                   /* oculta la barra en Chrome y Safari */
+}
+
+.pk-grid .pk-course {
+  flex: 0 0 var(--pk-card-w);
+  scroll-snap-align: center;
+}
+
+.pk-grid .pk-course:not(.pk-activa) {
+  transform: scale(0.92);
+  filter: brightness(0.6);
+}
+
+
+/* ---------- 4.4 Abanico ----------
+   Solo en pantallas de 1360px o más, con mouse (hover + puntero fino).
+   Cada tarjeta se corre y se inclina según su --lugar, que cursos.js
+   cuenta desde la activa (cursos.js, 7.2):
+     --lugar: -2  -1   0   1   2   (0 = la activa, siempre en el centro)
+   La tarjeta que quedaría en -3 o 3 se oculta: el abanico muestra 5
+   posiciones y se mantiene simétrico aunque haya más cursos.
+   Al pasar de tarjeta gira todo el abanico. La activa se endereza, sube
+   y queda al frente.
+*/
+
+@media (min-width: 1360px) and (hover: hover) and (pointer: fine) {
+  .pk-grid {
+    --pk-card-w: 340px;
+    --pk-paso: clamp(70px, 8.5vw, 140px);  /* separación entre tarjetas */
+
+    position: relative;
+    display: block;
+    height: 470px;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .pk-grid .pk-course {
+    position: absolute;
+    top: 48px;
+    bottom: 16px;
+    left: 50%;
+    width: var(--pk-card-w);
+    margin-left: calc(var(--pk-card-w) / -2);
+    transform-origin: 50% 140%;
+    will-change: transform;   /* el navegador prepara la tarjeta para moverse */
+  }
+
+  /*
+    Las dos posiciones (atrás y al frente) usan los mismos cuatro pasos y
+    en el mismo orden: correr, subir, inclinar, agrandar. Si no coinciden,
+    el navegador inventa el camino intermedio y la tarjeta se mueve raro.
+  */
+
+  /* Tarjetas de atrás: corridas, inclinadas y apagadas */
+  .pk-grid .pk-course:not(.pk-activa) {
+    transform:
+      translateX(calc(var(--lugar, 0) * var(--pk-paso)))
+      translateY(0)
+      rotate(calc(var(--lugar, 0) * 6deg))
+      scale(1);
+    filter: brightness(0.7);
+    cursor: pointer;
+  }
+
+  /* La tarjeta más lejana queda oculta (el abanico muestra 5 posiciones) */
+  .pk-grid .pk-course.pk-oculta {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Al pasar el mouse por una tarjeta de atrás, se ilumina un poco */
+  .pk-grid .pk-course:not(.pk-activa):hover {
+    filter: brightness(0.9);
+  }
+
+  /* La tarjeta que pasa de una punta a la otra salta sin animarse
+     (cursos.js le pone esta clase solo durante ese instante) */
+  .pk-grid .pk-course.pk-salto {
+    transition: none;
+  }
+
+  /* Los botones solo se ven en la tarjeta del frente. En las de atrás
+     no sirven (un clic las trae al frente) y asomaban por debajo de la
+     tarjeta activa. Su lugar lo ocupa el cartel "Clic para ver" (4.5b). */
+  .pk-grid .pk-course .pk-actions {
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  .pk-grid .pk-course:not(.pk-activa) .pk-actions {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  /* La tarjeta activa: derecha, más arriba y un poco más grande */
+  .pk-grid .pk-course.pk-activa {
+    transform:
+      translateX(calc(var(--lugar, 0) * var(--pk-paso)))
+      translateY(-32px)
+      rotate(0deg)
+      scale(1.04);
+  }
+}
+
+
+/* ---------- 4.5 Flechas, puntitos, contador y pista ----------
+   Carrusel: debajo de las tarjetas va una fila con
+             [flecha]  [puntitos + "Curso 1 de 5"]  [flecha]
+             y abajo la pista ("Deslizá con el dedo...").
+   Abanico:  las flechas se mueven a los costados de las tarjetas
+             (ver 4.5b más abajo).
+   Hasta que la persona usa el carrusel o el abanico por primera vez,
+   la flecha "siguiente" late y la pista se mueve, para llamar la
+   atención. Después, cursos.js agrega "pk-slider--usado" y se calman.
+*/
+
+.pk-slider {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas:
+    "tarjetas tarjetas tarjetas"
+    "anterior estado   siguiente"
+    "pista    pista    pista";
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.pk-grid {
+  grid-area: tarjetas;
+  min-width: 0;
+}
+
+.pk-slider__arrow {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--pk-line);
+  border-radius: 50%;
+  background: var(--pk-surface);
+  color: var(--pk-text);
+  font-size: 22px;
+  cursor: pointer;
+  transition: border-color 0.2s, opacity 0.2s, transform 0.2s;
+}
+
+.pk-slider__arrow--prev {
+  grid-area: anterior;
+  justify-self: end;
+}
+
+.pk-slider__arrow--next {
+  grid-area: siguiente;
+  justify-self: start;
+}
+
+.pk-slider__arrow:hover {
+  border-color: var(--pk-yellow);
+  transform: scale(1.06);
+}
+
+.pk-slider__arrow:disabled {
+  opacity: 0.3;
+  transform: none;
+  cursor: default;
+}
+
+/* La flecha "siguiente" late hasta el primer uso */
+.pk-slider:not(.pk-slider--usado) .pk-slider__arrow--next:not(:disabled) {
+  border-color: var(--pk-yellow);
+  color: var(--pk-yellow);
+  animation: pk-latido 1.8s ease-out infinite;
+}
+
+@keyframes pk-latido {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 214, 0, 0.5);
+  }
+
+  70%,
+  100% {
+    box-shadow: 0 0 0 14px rgba(255, 214, 0, 0);
+  }
+}
+
+/* Puntitos + contador */
+.pk-slider__status {
+  grid-area: estado;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.pk-slider__dots {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Cada puntito es un botón de 28px (fácil de tocar) con una barra adentro */
+.pk-slider__dots button {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: none;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.pk-slider__dots button::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--pk-line);
+  transition: width 0.3s, background 0.3s;
+}
+
+.pk-slider__dots button[aria-current="true"]::after {
+  width: 24px;
+  background: var(--pk-yellow);
+}
+
+.pk-slider__count {
+  margin: 0;
+  color: var(--pk-muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Pista: "Deslizá con el dedo..." / "Hacé clic en una tarjeta..." */
+.pk-slider__hint {
+  grid-area: pista;
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 0;
+  padding: 9px 18px;
+  border: 1px dashed var(--pk-yellow-line);
+  border-radius: 999px;
+  color: var(--pk-text);
+  font-size: 14px;
+  text-align: center;
+  transition: opacity 0.5s;
+}
+
+.pk-slider__hint-icon {
+  display: inline-flex;
+  color: var(--pk-yellow);
+  font-size: 18px;
+  animation: pk-vaiven 1.6s ease-in-out infinite;
+}
+
+@keyframes pk-vaiven {
+  0%,
+  100% {
+    transform: translateX(-4px);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+/* Después del primer uso, la pista se apaga (queda el lugar reservado) */
+.pk-slider--usado .pk-slider__hint {
+  opacity: 0;
+}
+
+.pk-slider--usado .pk-slider__hint-icon {
+  animation: none;
+}
+
+
+/* ---------- 4.5b Abanico: flechas a los costados y ayudas ---------- */
+
+@media (min-width: 1360px) and (hover: hover) and (pointer: fine) {
+  /* Las flechas salen de la fila de abajo y van a los costados */
+  .pk-slider__arrow {
+    position: absolute;
+    top: 214px;
+    z-index: 20;
+    grid-area: auto;
+    width: 60px;
+    height: 60px;
+  }
+
+  .pk-slider__arrow--prev {
+    left: 0;
+  }
+
+  .pk-slider__arrow--next {
+    right: 0;
+  }
+
+  /* Se puede arrastrar el abanico con el mouse */
+  .pk-grid {
+    cursor: grab;
+    user-select: none;     /* que no se pinte el texto al arrastrar */
+  }
+
+  .pk-grid:active {
+    cursor: grabbing;
+  }
+
+  /* Cartel "Clic para ver" en las tarjetas de atrás, del lado visible.
+     Va abajo, donde estaban los botones, así no tapa el título. */
+  .pk-grid .pk-course:not(.pk-activa)::before {
+    content: "Clic para ver";
+    position: absolute;
+    bottom: 32px;
+    z-index: 3;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--pk-yellow);
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+
+  .pk-grid .pk-course[data-lado="izq"]::before {
+    left: 20px;
+  }
+
+  .pk-grid .pk-course[data-lado="der"]::before {
+    right: 20px;
+  }
+
+  .pk-grid .pk-course:not(.pk-activa):hover::before {
+    opacity: 1;
+  }
+}
+
+
+/* ---------- 4.6 Animación de entrada ----------
+   Las tarjetas empiezan invisibles y un poco más abajo. Cuando la
+   sección aparece en pantalla, cursos.js le agrega "pk-visible" a la
+   grilla y las tarjetas suben de a una (cada una espera según su
+   --orden). Se usa "translate" (y no "transform") para no pisar el
+   movimiento del carrusel y del abanico.
+*/
+
+.pk-course {
+  opacity: 0;
+  translate: 0 32px;
+}
+
+.pk-grid.pk-visible .pk-course {
+  animation: pk-entrar 0.6s ease-out forwards;
+  animation-delay: calc(var(--orden, 0) * 120ms);
+}
+
+@keyframes pk-entrar {
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+
+/* ---------- 4.7 Animación al pasar el mouse ---------- */
+
+/* El ícono de la tarjeta activa se inclina y "saluda" */
+.pk-course.pk-activa:hover .pk-icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.pk-course.pk-activa:hover .pk-icon .pk-svg {
+  animation: pk-saludo 0.6s ease-in-out;
+}
+
+@keyframes pk-saludo {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  30% {
+    transform: rotate(-12deg);
+  }
+
+  60% {
+    transform: rotate(10deg);
+  }
+}
+
+
+/* =============================================================================
+   5. SECCIÓN: PRÓXIMOS CURSOS
+   ========================================================================== */
+
+.pk-next {
+  display: grid;
+  /* Una sola columna: la cinta ocupa todo el ancho de la sección */
+  grid-template-columns: minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 30px;
+  border: 1px dashed var(--pk-yellow-line);
+  border-radius: var(--pk-radius);
+}
+
+.pk-next[hidden] {
+  display: none;
+}
+
+/* Encabezado de la sección: texto a la izquierda y botón a la derecha */
+.pk-next > div:first-child {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "eyebrow boton"
+    "titulo boton"
+    "texto boton";
+  align-items: center;
+  column-gap: 32px;
+}
+
+.pk-next > div:first-child > .pk-eyebrow {
+  grid-area: eyebrow;
+}
+
+.pk-next > div:first-child > h3 {
+  grid-area: titulo;
+}
+
+.pk-next > div:first-child > .pk-text {
+  grid-area: texto;
+  margin-bottom: 0;
+}
+
+.pk-next > div:first-child > .pk-btn {
+  grid-area: boton;
+}
+
+.pk-next h3 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  color: var(--pk-text);
+}
+
+/* --- Cinta automática de próximos cursos ---
+   Hay dos listas iguales una al lado de la otra (la real y una copia).
+   Las dos se corren hacia la izquierda al mismo tiempo; cuando la primera
+   salió entera, la animación vuelve a empezar y no se nota el corte.
+   cursos.js arma la copia y define --pk-duracion según el ancho de la
+   lista, así la velocidad es siempre la misma.
+*/
+
+.pk-ticker {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.pk-ticker__track {
+  display: flex;
+  overflow: hidden;
+  padding: 8px 0;    /* lugar para que la tarjeta suba al pasar el mouse */
+
+  /* Los bordes se desvanecen: los cursos entran y salen suavemente */
+  -webkit-mask-image: linear-gradient(
+    to right, transparent, #000 6%, #000 94%, transparent
+  );
+  mask-image: linear-gradient(
+    to right, transparent, #000 6%, #000 94%, transparent
+  );
+}
+
+.pk-ticker__group {
+  --pk-ticker-gap: 16px;
+
+  flex: none;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--pk-ticker-gap);
+  min-width: 100%;          /* cada lista ocupa al menos todo el ancho */
+  margin: 0;
+  padding: 0 var(--pk-ticker-gap) 0 0;   /* mismo espacio entre las dos */
+  list-style: none;
+  will-change: transform;
+  animation: pk-desfile var(--pk-duracion, 24s) linear infinite;
+}
+
+@keyframes pk-desfile {
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Cada curso: imagen + sigla + nombre + "Muy pronto" */
+.pk-ticker__group li {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 26px 12px 12px;
+  border: 1px solid var(--pk-line);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+    var(--pk-surface);
+  white-space: nowrap;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Imagen del curso */
+.pk-ticker__media {
+  position: relative;
+  flex: none;
+  width: 148px;
+  height: 92px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--pk-yellow-soft);
+}
+
+.pk-ticker__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.pk-ticker__group li:hover .pk-ticker__img {
+  transform: scale(1.06);
+}
+
+/* El curso que tiene el mouse encima se ilumina y sube un poco */
+.pk-ticker__group li:hover {
+  transform: translateY(-4px);
+  border-color: var(--pk-yellow-line);
+  box-shadow: 0 10px 24px rgba(255, 214, 0, 0.1);
+}
+
+/* La sigla va como etiqueta sobre la esquina de la imagen */
+.pk-ticker__media .pk-next__code {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(10, 10, 10, 0.72);
+  border-color: rgba(255, 214, 0, 0.6);
+  color: var(--pk-yellow);
+  font-size: 12px;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.pk-ticker__info {
+  display: grid;
+  gap: 3px;
+}
+
+.pk-ticker__name {
+  color: var(--pk-text);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pk-ticker__soon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--pk-yellow);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pk-ticker__soon::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* Se frena al pasar el mouse, para poder leer con calma */
+.pk-ticker:hover .pk-ticker__group {
+  animation-play-state: paused;
+}
+
+/* Sigla del curso ("IA", "PY") */
+.pk-next__code {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--pk-yellow-line);
+  border-radius: 10px;
+  color: var(--pk-yellow);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Punto que "late" */
+.pk-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--pk-yellow);
+  animation: pk-pulse 2s infinite;
+}
+
+@keyframes pk-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 214, 0, 0.6);
+  }
+
+  70% {
+    box-shadow: 0 0 0 8px rgba(255, 214, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 214, 0, 0);
+  }
+}
+
+
+/* =============================================================================
+   6. RESPONSIVE
+   ========================================================================== */
+
+/* Laptop y tablet */
+@media (max-width: 1100px) {
+  .pk-head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+}
+
+@media (max-width: 900px) {
+  .pk-next {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .pk-course {
+    padding: 24px;
+  }
+
+  .pk-course__title {
+    font-size: 23px;
+  }
+}
+
+/* Celular */
+@media (max-width: 640px) {
+  .pk-course,
+  .pk-next {
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .pk-actions {
+    flex-direction: column;
+  }
+
+  .pk-actions .pk-btn,
+  .pk-next .pk-btn {
+    box-sizing: border-box;   /* el ancho incluye el relleno: no se pasa */
+    width: 100%;
+  }
+
+  /* En celular el encabezado se apila y el botón queda abajo */
+  .pk-next > div:first-child {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "eyebrow"
+      "titulo"
+      "texto"
+      "boton";
+    row-gap: 4px;
+    column-gap: 0;
+  }
+
+  .pk-next > div:first-child > .pk-text {
+    margin-bottom: 8px;
+  }
+
+  .pk-ticker__media {
+    width: 84px;
+    height: 54px;
+  }
+
+  .pk-ticker__group li {
+    gap: 12px;
+    max-width: 300px;
+    padding: 10px 16px 10px 10px;
+    white-space: normal;
+  }
+
+  .pk-ticker__name {
+    font-size: 16px;
+  }
+}
+
+
+/* =============================================================================
+   7. MODO CLARO
+   Se activa cuando <body> tiene la clase "light-mode" (botón del sitio).
+   ========================================================================== */
+
+body.light-mode .pk-cursos {
+  --pk-bg: #f5f6f2;
+  --pk-surface: #ffffff;
+  --pk-line: #cfd8d1;
+  --pk-text: #141716;
+  --pk-muted: #3f4b45;
+  --pk-yellow-soft: #fff6c7;
+}
+
+body.light-mode .pk-cursos :is(
+  .pk-eyebrow,
+  .pk-level,
+  .pk-next__code
+) {
+  color: #7a5c00;
+}
+
+/* La sigla sobre la imagen mantiene el amarillo también en modo claro */
+body.light-mode .pk-cursos .pk-ticker__media .pk-next__code {
+  color: var(--pk-yellow);
+}
+
+/* En modo claro, las tarjetas de costado se ven pálidas en vez de oscuras */
+body.light-mode .pk-grid .pk-course:not(.pk-activa) {
+  filter: grayscale(0.6) opacity(0.6);
+}
+
+
+
+/* =============================================================================
+   8. ACCESIBILIDAD
+   ========================================================================== */
+
+/* Borde visible al navegar con teclado */
+.pk-cursos :is(a, button):focus-visible {
+  outline: 3px solid var(--pk-yellow);
+  outline-offset: 3px;
+}
+
+/*
+  Personas que activaron "Reducir movimiento" en su dispositivo
+  (lo usan, por ejemplo, quienes se marean con el movimiento en pantalla).
+  Todo sigue funcionando igual: carrusel, abanico y flechas.
+  Solo se saca el movimiento: las cosas aparecen directo en su lugar.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .pk-course,
+  .pk-course::after,
+  .pk-course .pk-icon,
+  .pk-btn .pk-svg,
+  .pk-slider__dots button::after {
+    transition: none;
+  }
+
+  /* El carrusel salta de tarjeta en vez de deslizarse */
+  .pk-grid {
+    scroll-behavior: auto;
+  }
+
+  /* Las tarjetas se muestran directo, sin subir */
+  .pk-course,
+  .pk-grid.pk-visible .pk-course {
+    opacity: 1;
+    translate: none;
+    animation: none;
+  }
+
+  .pk-pulse,
+  .pk-course.pk-activa:hover .pk-icon .pk-svg,
+  .pk-slider__arrow,
+  .pk-slider__hint-icon {
+    animation: none !important;
+  }
+
+  /* Próximos cursos: lista quieta en vez de cinta que se desliza */
+  .pk-ticker__track {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .pk-ticker__group {
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-width: 0;
+    padding: 0;
+    animation: none;
+  }
+
+  .pk-ticker__group li {
+    white-space: normal;
+    transition: none;
+  }
+
+  .pk-ticker__group li:hover {
+    transform: none;
+  }
+
+  .pk-ticker__group[aria-hidden="true"] {
+    display: none;
+  }
+}

@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Testing QA Manual | Pakova</title>
+    <meta
+      name="description"
+      content="Curso gratuito de Testing QA Manual: aprendé a analizar requerimientos, diseñar casos de prueba, detectar errores y reportar incidencias."
+    />
+
+    <link rel="icon" type="image/png" href="img/pakova-logo.png" />
+    <link rel="stylesheet" href="testing-qa-manual.css" />
+  </head>
+
+  <body>
+    <!-- BARRA DE PROGRESO DE LECTURA -->
+    <div class="progreso" aria-hidden="true"></div>
+
+    <!-- ENCABEZADO -->
+    <header class="site-header">
+      <div class="contenedor site-header__interior">
+        <a
+          class="logo"
+          href="cursos.html#cursos"
+          aria-label="Pakova · Volver a cursos"
+        >
+          <img
+            class="logo__imagen"
+            src="img/pakova-logo.png"
+            alt="Pakova"
+            width="58"
+            height="58"
+          />
+        </a>
+        <a class="volver" href="cursos.html#cursos">← Volver a cursos</a>
+      </div>
+    </header>
+
+    <!-- ÍNDICE DE SECCIONES (escritorio) -->
+    <nav class="indice" aria-label="Secciones del curso">
+      <a class="indice__enlace" href="#sobre">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Sobre el curso</span>
+      </a>
+      <a class="indice__enlace" href="#aprender">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Aprender</span>
+      </a>
+      <a class="indice__enlace" href="#programa">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Programa</span>
+      </a>
+      <a class="indice__enlace" href="#para-quien">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Para quién es</span>
+      </a>
+      <a class="indice__enlace" href="#al-terminar">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Al terminar</span>
+      </a>
+      <a class="indice__enlace" href="#preguntas">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Preguntas</span>
+      </a>
+    </nav>
+
+    <main>
+      <!-- PORTADA -->
+      <section class="hero">
+        <div class="contenedor hero__grid">
+          <div>
+            <h1>Testing QA Manual</h1>
+
+            <p class="hero__descripcion">
+              Aprendé a probar aplicaciones, páginas web y sistemas antes de
+              que lleguen a los usuarios. Una base práctica para empezar en el
+              mundo de la calidad de software.
+            </p>
+
+            <div class="datos">
+              <span class="dato">Gratuito</span>
+              <span class="dato">Nivel inicial</span>
+              <span class="dato">5 temas</span>
+              <span class="dato">Con acompañamiento</span>
+            </div>
+
+            <div class="botones">
+              <a
+                class="boton boton--amarillo"
+                href="https://wa.me/5493416206812?text=Hola%20Pakova%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20Testing%20QA%20Manual"
+                target="_blank"
+                rel="noopener"
+              >
+                Consultar por WhatsApp
+              </a>
+              <a class="boton boton--borde" href="#programa">
+                Ver el programa
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__arte">
+            <svg
+              viewBox="0 0 460 460"
+              role="img"
+              aria-label="Lupa revisando una lista de pruebas"
+            >
+              <defs>
+                <radialGradient id="halo" cx="50%" cy="45%" r="50%">
+                  <stop offset="0%" stop-color="#f5d84e" stop-opacity=".16" />
+                  <stop offset="55%" stop-color="#f5d84e" stop-opacity=".05" />
+                  <stop offset="100%" stop-color="#f5d84e" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+
+              <circle cx="230" cy="220" r="220" fill="url(#halo)" />
+              <circle
+                cx="230"
+                cy="220"
+                r="176"
+                fill="none"
+                stroke="#2a2f2c"
+                stroke-width="1.5"
+                stroke-dasharray="3 12"
+              />
+
+              <!-- Lupa -->
+              <circle
+                cx="215"
+                cy="205"
+                r="118"
+                fill="#0b0d0c"
+                stroke="#f5d84e"
+                stroke-width="9"
+              />
+              <circle
+                cx="215"
+                cy="205"
+                r="104"
+                fill="none"
+                stroke="#f5d84e"
+                stroke-width="1"
+                opacity=".25"
+              />
+              <line
+                x1="300"
+                y1="292"
+                x2="372"
+                y2="364"
+                stroke="#f5d84e"
+                stroke-width="18"
+                stroke-linecap="round"
+              />
+
+              <!-- Ventana con lista de pruebas -->
+              <rect
+                x="145"
+                y="145"
+                width="145"
+                height="120"
+                rx="10"
+                fill="#0c0e0d"
+                stroke="#f5d84e"
+                stroke-width="5"
+              />
+              <line
+                x1="145"
+                y1="172"
+                x2="290"
+                y2="172"
+                stroke="#f5d84e"
+                stroke-width="4"
+              />
+              <circle cx="160" cy="159" r="3.5" fill="#f5d84e" />
+              <circle cx="174" cy="159" r="3.5" fill="#f5d84e" />
+              <circle cx="188" cy="159" r="3.5" fill="#f5d84e" />
+
+              <g
+                stroke="#f5d84e"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              >
+                <path d="M160 195l7 7 12-13" />
+                <path d="M160 220l7 7 12-13" />
+                <path d="M160 245l7 7 12-13" />
+              </g>
+              <g stroke="#aeb5b2" stroke-width="4" stroke-linecap="round">
+                <line x1="192" y1="196" x2="270" y2="196" />
+                <line x1="192" y1="221" x2="270" y2="221" />
+                <line x1="192" y1="246" x2="270" y2="246" />
+              </g>
+
+              <!-- Detalles -->
+              <circle cx="70" cy="120" r="5" fill="#f5d84e" opacity=".6" />
+              <circle cx="392" cy="120" r="3" fill="#f5d84e" opacity=".5" />
+              <circle cx="70" cy="330" r="3" fill="#f5d84e" opacity=".5" />
+              <path
+                d="M372 66v16M364 74h16"
+                stroke="#f5d84e"
+                stroke-width="2"
+                stroke-linecap="round"
+                opacity=".55"
+              />
+              <path
+                d="M92 260h16M100 252v16"
+                stroke="#f5d84e"
+                stroke-width="2"
+                stroke-linecap="round"
+                opacity=".4"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE EL CURSO -->
+      <section class="seccion" id="sobre">
+        <div class="contenedor animar">
+          <h2 class="etiqueta">Sobre el curso</h2>
+
+          <div class="sobre">
+            <p class="sobre__lead">
+              El curso de Testing QA Manual está pensado para quienes quieren
+              iniciarse en el mundo de la calidad de software y aprender cómo
+              se prueban aplicaciones, páginas web y sistemas antes de que
+              lleguen a los usuarios.
+            </p>
+
+            <div class="sobre__texto">
+              <p>
+                Durante la capacitación vas a aprender a analizar
+                requerimientos, diseñar y ejecutar casos de prueba, detectar
+                errores, reportar incidencias y validar que un producto
+                funcione correctamente.
+              </p>
+              <p>
+                El objetivo es darte herramientas prácticas para comprender el
+                trabajo de un Tester QA y construir una base sólida que te
+                permita seguir creciendo dentro del área de calidad de
+                software.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUÉ VAS A APRENDER -->
+      <section class="seccion" id="aprender">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Qué vas a aprender</p>
+            <h2>Una base sólida para empezar en QA</h2>
+            <p class="subtitulo">
+              Conceptos, práctica y herramientas para entender cómo se prueba
+              un producto de principio a fin.
+            </p>
+          </div>
+
+          <ul class="puntos revelar">
+            <li>
+              <strong>Fundamentos de testing y calidad</strong>
+              <span>
+                Qué es la calidad de software y por qué se prueba antes de
+                publicar.
+              </span>
+            </li>
+            <li>
+              <strong>Análisis de requerimientos</strong>
+              <span>
+                Cómo leer lo que el producto necesita y convertirlo en pruebas
+                concretas.
+              </span>
+            </li>
+            <li>
+              <strong>Creación y ejecución de casos de prueba</strong>
+              <span>
+                Cómo pensar qué probar, escribir los casos y organizarlos.
+              </span>
+            </li>
+            <li>
+              <strong>Pruebas funcionales y casos borde</strong>
+              <span>
+                Probar lo esperado y también lo que podría fallar en los
+                extremos.
+              </span>
+            </li>
+            <li>
+              <strong>Detección y reporte de errores</strong>
+              <span>
+                Cómo documentar una falla para que el equipo pueda
+                reproducirla y corregirla.
+              </span>
+            </li>
+            <li>
+              <strong>Herramientas del equipo</strong>
+              <span>
+                Las herramientas habituales que se usan a diario en equipos de
+                desarrollo y QA.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROGRAMA -->
+      <section class="seccion" id="programa">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Programa</p>
+            <h2>Cómo se organiza el curso</h2>
+            <p class="subtitulo">
+              Cinco temas que van de los conceptos base a la forma de trabajo
+              de un equipo real.
+            </p>
+          </div>
+
+          <ol class="temario revelar">
+            <li>
+              <span class="temario__num" aria-hidden="true"></span>
+              <div>
+                <h3>Fundamentos de QA</h3>
+                <p>
+                  Qué es la calidad de software, por qué existen los errores y
+                  cuál es el rol de quien hace testing dentro de un equipo.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="temario__num" aria-hidden="true"></span>
+              <div>
+                <h3>Ciclo de vida del software</h3>
+                <p>
+                  Las etapas por las que pasa un producto, desde la idea hasta
+                  que se publica, y en qué momento interviene el testing.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="temario__num" aria-hidden="true"></span>
+              <div>
+                <h3>Casos de prueba</h3>
+                <p>
+                  Cómo pensar qué probar, escribir casos de prueba claros y
+                  organizarlos para no dejar nada afuera.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="temario__num" aria-hidden="true"></span>
+              <div>
+                <h3>Reporte de errores</h3>
+                <p>
+                  Cómo describir un error para que se pueda reproducir y
+                  corregir: pasos, resultado esperado, resultado obtenido y
+                  evidencia.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span class="temario__num" aria-hidden="true"></span>
+              <div>
+                <h3>Metodologías ágiles</h3>
+                <p>
+                  Cómo se organizan los equipos que trabajan con Scrum y otras
+                  metodologías ágiles, y cómo se integra el testing en ese
+                  ritmo de trabajo.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- PARA QUIÉN ES / REQUISITOS -->
+      <section class="seccion" id="para-quien">
+        <div class="contenedor columnas animar">
+          <div class="bloque">
+            <p class="etiqueta">Para quién es</p>
+            <h2>Si querés empezar en tecnología, este curso es para vos</h2>
+            <ul class="lista-puntos revelar">
+              <li>
+                Personas que quieren dar su primer paso en el mundo
+                tecnológico.
+              </li>
+              <li>
+                Quienes buscan una salida laboral en el área de software.
+              </li>
+              <li>
+                Personas detallistas, curiosas y con ganas de entender cómo
+                funcionan las cosas.
+              </li>
+            </ul>
+          </div>
+
+          <div class="bloque">
+            <p class="etiqueta">Requisitos</p>
+            <h2>No necesitás experiencia previa</h2>
+            <ul class="lista-puntos revelar">
+              <li>Manejo básico de computadora e internet.</li>
+              <li>No hace falta experiencia previa en tecnología.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- AL TERMINAR -->
+      <section class="seccion" id="al-terminar">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Al terminar</p>
+            <h2>Qué vas a poder hacer</h2>
+          </div>
+
+          <ul class="checklist revelar">
+            <li>Entender cómo trabaja un equipo de QA.</li>
+            <li>Diseñar y ejecutar casos de prueba.</li>
+            <li>Reportar errores de forma clara y profesional.</li>
+            <li>Usar herramientas de gestión de pruebas.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PREGUNTAS FRECUENTES -->
+      <section class="seccion" id="preguntas">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Preguntas frecuentes</p>
+            <h2>Lo que suelen preguntarnos</h2>
+          </div>
+
+          <div class="faq animar">
+            <details>
+              <summary>¿Necesito saber programar?</summary>
+              <p>
+                No. El testing manual no requiere programar. Si después querés
+                automatizar pruebas, Testing QA Automation es el siguiente
+                paso.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿Hace falta experiencia previa?</summary>
+              <p>
+                No. El curso es de nivel inicial y está pensado para empezar
+                desde cero en el mundo de QA.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿El curso es gratuito?</summary>
+              <p>
+                Sí. Es gratuito, con acompañamiento y práctica desde la
+                primera clase.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- LLAMADO FINAL -->
+      <section class="cta-final">
+        <div class="contenedor cta-final__interior animar">
+          <div>
+            <h2>¿Empezamos por el principio?</h2>
+            <p>
+              Escribinos y te contamos cuándo abre la próxima convocatoria,
+              cómo es la modalidad y qué necesitás para empezar.
+            </p>
+          </div>
+
+          <div class="cta-final__acciones">
+            <a
+              class="boton boton--amarillo"
+              href="https://wa.me/5493416206812?text=Hola%20Pakova%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20Testing%20QA%20Manual"
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar por WhatsApp
+            </a>
+            <a class="boton boton--borde" href="cursos.html#cursos">
+              Ver otros cursos
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE -->
+    <footer class="site-footer">
+      <div class="contenedor site-footer__interior">
+        <span>Pakova Testing · Aprendé, practicá y creá.</span>
+        <a href="cursos.html#cursos">Volver a cursos ↑</a>
+      </div>
+    </footer>
+
+<script src="testing-qa-manual.js" defer></script>
+  </body>
+</html>
