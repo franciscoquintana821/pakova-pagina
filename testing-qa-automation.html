@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Testing QA Automation con IA | Pakova</title>
+    <meta
+      name="description"
+      content="Curso gratuito de Testing QA Automation con IA: aprendé a automatizar pruebas, escribir tus primeros tests y leer sus resultados."
+    />
+
+    <link rel="icon" type="image/png" href="../img/pakova-logo.png" />
+    <link rel="stylesheet" href="../css/testing-qa-automation.css" />
+  </head>
+
+  <body>
+    <!-- BARRA DE PROGRESO DE LECTURA -->
+    <div class="progreso" aria-hidden="true"></div>
+
+    <!-- ENCABEZADO -->
+    <header class="site-header">
+      <div class="contenedor site-header__interior">
+        <a
+          class="logo"
+          href="cursos.html#cursos"
+          aria-label="Pakova · Volver a cursos"
+        >
+          <img
+            class="logo__imagen"
+            src="../img/pakova-logo.png"
+            alt="Pakova"
+            width="58"
+            height="58"
+          />
+        </a>
+        <a class="volver" href="cursos.html#cursos">← Volver a cursos</a>
+      </div>
+    </header>
+
+    <!-- ÍNDICE DE SECCIONES (escritorio) -->
+    <nav class="indice" aria-label="Secciones del curso">
+      <a class="indice__enlace" href="#sobre">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Sobre el curso</span>
+      </a>
+      <a class="indice__enlace" href="#aprender">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Aprender</span>
+      </a>
+      <a class="indice__enlace" href="#programa">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Programa</span>
+      </a>
+      <a class="indice__enlace" href="#para-quien">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Para quién es</span>
+      </a>
+      <a class="indice__enlace" href="#al-terminar">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Al terminar</span>
+      </a>
+      <a class="indice__enlace" href="#preguntas">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Preguntas</span>
+      </a>
+    </nav>
+
+    <main>
+      <!-- PORTADA -->
+      <section class="hero">
+        <div class="contenedor hero__grid">
+          <div>
+            <h1>
+              Testing QA Automation
+              <span class="hero__acento">con IA</span>
+            </h1>
+
+            <p class="hero__descripcion">
+              Aprendé a crear programas que revisan apps y páginas web solos y
+              avisan cuando algo falla. El paso siguiente al testing manual,
+              con <strong>inteligencia artificial</strong> como aliada.
+            </p>
+
+            <div class="datos">
+              <span class="dato">Gratuito</span>
+              <span class="dato">Nivel intermedio</span>
+            </div>
+
+            <div class="botones">
+              <a
+                class="boton boton--amarillo"
+                href="https://wa.me/5493416206812?text=Hola%20Pakova%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20Testing%20QA%20Automation%20con%20IA"
+                target="_blank"
+                rel="noopener"
+              >
+                Consultar por WhatsApp
+              </a>
+              <a class="boton boton--borde" href="#programa">
+                Ver el programa
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__arte">
+            <img
+              src="../img/testing-qa-automation-hero.svg"
+              alt="Un robot de Pakova ejecutando pruebas automáticas y aprobando el reporte"
+              width="810"
+              height="810"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE EL CURSO -->
+      <section class="seccion" id="sobre">
+        <div class="contenedor animar">
+          <h2 class="etiqueta">Sobre el curso</h2>
+
+          <div class="sobre">
+            <p class="sobre__lead">
+              Cuando un programa crece, probarlo todo a mano lleva mucho
+              tiempo. La automatización consiste en escribir pruebas que la
+              computadora ejecuta sola, cada vez que hace falta, y que avisan
+              si algo dejó de funcionar.
+            </p>
+
+            <div class="sobre__texto">
+              <p>
+                En este curso vas a dar el paso del testing manual al
+                automatizado: vas a aprender a pensar qué conviene automatizar,
+                a escribir tus primeras pruebas y a leer sus resultados.
+              </p>
+              <p>
+                El objetivo es que sumes herramientas cada vez más buscadas por
+                las empresas y que puedas aplicar la inteligencia artificial
+                para escribir, revisar y mantener tus pruebas con más
+                confianza.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUÉ VAS A APRENDER -->
+      <section class="seccion" id="aprender">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Qué vas a aprender</p>
+            <h2>El paso del testing manual al automatizado</h2>
+            <p class="subtitulo">
+              Programación, herramientas y criterio para que la computadora
+              pruebe por vos y te avise cuando algo no está bien.
+            </p>
+          </div>
+
+          <ul class="puntos revelar">
+            <li>
+              <strong>Qué es la automatización</strong>
+              <span>
+                Para qué sirve, cuándo conviene automatizar una prueba y cuándo
+                es mejor hacerla a mano.
+              </span>
+            </li>
+            <li>
+              <strong>Programación para testers</strong>
+              <span>
+                Los conceptos de programación que hacen falta para escribir
+                pruebas, explicados paso a paso.
+              </span>
+            </li>
+            <li>
+              <strong>Pruebas de páginas web</strong>
+              <span>
+                Cómo hacer que un programa abra una página, complete
+                formularios y revise que todo funcione.
+              </span>
+            </li>
+            <li>
+              <strong>Pruebas de servicios (APIs)</strong>
+              <span>
+                Cómo probar la parte invisible de una aplicación: los datos que
+                se envían y se reciben.
+              </span>
+            </li>
+            <li>
+              <strong>Organizar las pruebas</strong>
+              <span>
+                Cómo ordenar las pruebas para que sean fáciles de mantener y de
+                volver a usar.
+              </span>
+            </li>
+            <li>
+              <strong>Reportes de resultados</strong>
+              <span>
+                Cómo leer lo que devuelven las pruebas y comunicar los errores
+                al equipo.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROGRAMA -->
+      <section class="seccion" id="programa">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Programa</p>
+            <h2>Cómo se organiza el curso</h2>
+            <p class="subtitulo">
+              Temas que van de la idea de automatizar hasta el reporte de
+              resultados, siempre con práctica.
+            </p>
+          </div>
+
+          <ol class="temario revelar">
+            <li>
+            <p> Clase  <span class="temario__num" aria-hidden="true"></span></p> 
+              <div>
+                <h3>Módulo 1 Estrategia y entorno </h3>
+                <p>
+                  Qué automatizar y qué mantener manual. Priorizar casos por riesgo y mantenimiento.
+                </p>
+              </div>
+            </li>
+            <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span> </p> 
+              <div>
+                <p>
+                  Node.js, editor y proyecto. Instalar dependencias y ejecutar un ejemplo.
+                </p>
+              </div>
+              <div>
+              </li>
+
+            <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span></p> 
+              <div>
+                <p>
+                Git y trabajo con repositorios. Crear commits y documentar el entorno.
+                </p>
+              </div>
+              <div>
+              </li>
+
+             <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"> </span></p>              
+              <div>
+                <p>
+                  Repaso aplicado de JavaScript. Resolver funciones y manipulación de datos.
+                </p>
+              </div>
+              <div>
+              </li>
+
+              <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span></p>
+              <div>
+                <p>
+              Estructura de specs y primer test. Visitar una página y verificar un resultado.
+                </p>
+              </div>
+              </li>
+
+              <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span></p>
+              <div>
+                <p>
+                Comandos y ejecución en Cypress. Comprender encadenamiento, reintentos y sincronización.
+                </p>
+              </div>
+              </li>
+
+              <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span></p>
+              <div>
+                <p>
+                Localizadores y aserciones. Seleccionar elementos con criterios estables.
+                </p>
+              </div>
+              </li>
+
+              <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span></p>
+              <div>
+                <p>
+                 Formularios e interacciones. Automatizar alta válida y errores de validación.
+                </p>
+              </div>
+              </li>
+
+              <li>
+              <p>Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <h3>Módulo 3 Diseño de suites mantenibles </h3>
+                <p>
+                Hooks y aislamiento. Preparar un estado independiente por prueba.
+                </p>
+              </div>
+            </li>
+
+          <li>
+             <p>Clase <span class="temario__num" aria-hidden="true"></span></p>
+              <div>
+                <p>
+                  Fixtures y datos de prueba. Separar datos del comportamiento.
+              </div>
+              </li>
+
+              <li>
+               <p>Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                Funciones auxiliares y reutilización. Refactorizar duplicación sin ocultar verificaciones.
+              </div>
+              </li>
+
+               <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                 Casos positivos, negativos y límites. Ampliar cobertura y revisar legibilidad.
+              </div>
+              </li>
+
+              <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <h3>Módulo 4 APIs y control de red </h3>
+                <p>
+                  HTTP y cy.request. Verificar estados y contenido de una API.
+                </p>
+              </div>
+            </li>
+
+            <li>
+             <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                Preparación y limpieza por API. Crear y eliminar datos en un entorno autorizado.
+              </div>
+              </li>
+
+               <li>
+             <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                  cy.intercept y alias. Observar solicitudes y sincronizar pruebas.
+              </div>
+              </li>
+
+                  <li>
+             <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                 Simulaciones y contratos esperados. Comparar respuestas reales y controladas.
+                 <h4>Cada clase dura 120 minutos. La actividad indicada forma parte de ese tiempo.</h4>
+              </li>
+                            
+             <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <h3>Módulo 5 Depuración y estabilidad </h3>
+                <p>
+                Fallos, capturas y registros. Distinguir defecto de producto y error del test.
+                </p>
+              </div>
+            </li>
+
+            <li>
+             <p>Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+              <p>Esperas y asincronía. Reemplazar pausas arbitrarias por condiciones verificables.</p>
+              </div>
+              </li>
+
+              <li>
+             <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                 Sesiones, autenticación y secretos. Probar un login sin publicar credenciales.
+              </li>
+
+               <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                Flakiness y mantenimiento. Diagnosticar una suite inestable y corregir causas.
+              </li>
+
+              <li>
+              <p>Clase <span class="temario__num" aria-hidden="true"></span>  </p>
+              <div>
+                <h3>Módulo 6 IA aplicada al trabajo QA </h3>
+                <h4>Clases 21 a 24 · 8 h reloj · semanas 11 y 12 </h4>
+                <p>
+               Contexto, instrucciones y criterios de calidad. Preparar una consulta con datos ficticios.
+                </p>
+              </div>
+            </li>
+
+            <li>
+             <p> Clase  <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                Generación asistida de escenarios. Detectar omisiones y supuestos inventados.
+              </li>
+
+              <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                 Código sugerido por IA. Ejecutar, revisar y corregir una propuesta de test.
+              </li>
+
+              <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+             Privacidad, sesgos y trazabilidad. Comparar resultado humano e IA y documentar
+decisiones.
+
+            <li>
+             <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <h3>Módulo 7 Integración y colaboración </h3>
+                <h4>Clases 25 a 28 · 8 h reloj · semanas 13 y 14 </h4>
+                <p>
+               Ejecución desde terminal y configuración. Reproducir la suite en un entorno limpio.
+                </p>
+              </div>
+            </li>
+
+            <li>
+             <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+              Pipeline de integración continua. Configurar una ejecución al actualizar el repositorio.
+              </li>  
+            
+            <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+               Resultados y artefactos. Analizar fallos y conservar evidencias útiles.
+              </li>  
+
+            <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+               Revisión de código y documentación. Revisar cambios de un compañero.
+              </li>
+            
+            <li>
+              <p>Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <h3>Módulo 8 Proyecto final </h3>
+                <h4>Clases 29 a 32 · 8 h reloj · semanas 15 y 16 </h4>
+                <p>
+                 Diseño de la estrategia. Definir alcance, riesgos y criterios de selección.
+                </p>
+              </div>
+            </li>
+            
+            <li>
+             <p>Clase <span class="temario__num" aria-hidden="true"></span></p>
+              <div>
+                <p>
+                 Implementación de la suite. Desarrollar escenarios UI y API priorizados.
+              </li>  
+           
+             <li>
+             <p> Clase <span class="temario__num" aria-hidden="true"></span></p>
+              <div>
+                <p>
+                 Ejecución y mantenimiento. Corregir fallos y demostrar independencia de tests.
+          </li>  
+          
+          <li>
+            <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                 Demostración y defensa. Explicar cobertura, límites y aporte verificado de IA.
+                <h3>Entrega final</h3>
+                  <h4>Repositorio reproducible con pruebas UI y API, datos controlados, ejecución automatizada y registro
+de revisión de IA.</h4>    
+                </li>  
+
+          </ol>
+        </div>
+      </section>
+
+      <!-- PARA QUIÉN ES / REQUISITOS -->
+      <section class="seccion" id="para-quien">
+        <div class="contenedor columnas animar">
+          <div class="bloque">
+            <p class="etiqueta">Para quién es</p>
+            <h2>Si ya diste el primer paso, este curso te lleva al siguiente</h2>
+            <ul class="lista-puntos revelar">
+              <li>
+                Quienes hicieron Testing QA Manual y quieren seguir creciendo.
+              </li>
+              <li>
+                Testers que quieren sumar herramientas más buscadas por las
+                empresas.
+              </li>
+              <li>
+                Personas con nociones de programación que quieren aplicarlas.
+              </li>
+            </ul>
+          </div>
+
+          <div class="bloque">
+            <p class="etiqueta">Requisitos</p>
+            <h2>Una base de QA y ganas de programar</h2>
+            <ul class="lista-puntos revelar">
+              <li>
+                Haber completado Testing QA Manual <strong>(obligatorio)</strong>.
+              </li>
+              <li>Recomendable: nociones básicas de programación.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- AL TERMINAR -->
+      <section class="seccion" id="al-terminar">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Al terminar</p>
+            <h2>Qué vas a poder hacer</h2>
+          </div>
+
+          <ul class="checklist revelar">
+            <li>Decidir qué pruebas conviene automatizar.</li>
+            <li>Escribir pruebas automáticas para páginas web.</li>
+            <li>Probar servicios y datos de una aplicación.</li>
+            <li>Leer resultados y reportar errores al equipo.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PREGUNTAS FRECUENTES -->
+      <section class="seccion" id="preguntas">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Preguntas frecuentes</p>
+            <h2>Lo que suelen preguntarnos</h2>
+          </div>
+
+          <div class="faq animar">
+            <details>
+              <summary>¿Necesito saber programar?</summary>
+              <p>
+                Ayuda tener nociones básicas. Si nunca programaste, te
+                recomendamos empezar por
+                <a href="programacion-web-inicial.html">Programación Web Inicial</a>
+                y después volver a este curso.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿Es obligatorio haber hecho Testing QA Manual?</summary>
+              <p>
+                Sí, es obligatorio. Para hacer este curso tenés que haber
+                completado Testing QA Manual: ahí se aprenden las bases de QA
+                que después vas a automatizar. Si todavía no lo hiciste,
+                empezá por
+                <a href="testing-qa-manual.html">Testing QA Manual</a> y
+                después volvé a este curso.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿Necesito instalar programas?</summary>
+              <p>
+                Vas a usar herramientas gratuitas que se instalan en la
+                computadora. En la primera clase te explicamos cómo dejarlas
+                listas.
+              </p>
+            </details>
+
+            <details>
+              <summary>¿El curso es gratuito?</summary>
+              <p>
+                Sí. Es gratuito, con acompañamiento y práctica desde la primera
+                clase.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- LLAMADO FINAL -->
+      <section class="cta-final">
+        <div class="contenedor cta-final__interior animar">
+          <div>
+            <h2>¿Querés dar el siguiente paso?</h2>
+            <p>
+              Escribinos y te contamos cuándo abre la próxima convocatoria,
+              cómo es la modalidad y qué necesitás para empezar.
+            </p>
+          </div>
+
+          <div class="cta-final__acciones">
+            <a
+              class="boton boton--amarillo"
+              href="https://wa.me/5493416206812?text=Hola%20Pakova%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20Testing%20QA%20Automation%20con%20IA"
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar por WhatsApp
+            </a>
+            <a class="boton boton--borde" href="cursos.html#cursos">
+              Ver otros cursos
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE -->
+    <footer class="site-footer">
+      <div class="contenedor site-footer__interior">
+        <span>Pakova Testing · Aprendé, practicá y creá.</span>
+        <a href="cursos.html#cursos">Volver a cursos ↑</a>
+      </div>
+    </footer>
+
+    <script src="../js/testing-qa-automation.js" defer></script>
+  </body>
+</html>
