@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Testing QA de Videojuegos | Pakova</title>
+    <meta
+      name="description"
+      content="Curso gratuito de Testing QA de Videojuegos: aprendé a encontrar fallas, evaluar la jugabilidad y reportar errores como un equipo profesional."
+    />
+
+    <link rel="icon" type="image/png" href="../img/pakova-logo.png" />
+    <link rel="stylesheet" href="../css/testing-qa-videojuegos.css" />
+  </head>
+
+  <body>
+    <!-- BARRA DE PROGRESO DE LECTURA -->
+    <div class="progreso" aria-hidden="true"></div>
+
+    <!-- ENCABEZADO -->
+    <header class="site-header">
+      <div class="contenedor site-header__interior">
+        <a
+          class="logo"
+          href="cursos.html#cursos"
+          aria-label="Pakova · Volver a cursos"
+        >
+          <img
+            class="logo__imagen"
+            src="../img/pakova-logo.png"
+            alt="Pakova"
+            width="58"
+            height="58"
+          />
+        </a>
+        <a class="volver" href="cursos.html#cursos">← Volver a cursos</a>
+      </div>
+    </header>
+
+    <!-- ÍNDICE DE SECCIONES (escritorio) -->
+    <nav class="indice" aria-label="Secciones del curso">
+      <a class="indice__enlace" href="#sobre">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Sobre el curso</span>
+      </a>
+      <a class="indice__enlace" href="#aprender">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Aprender</span>
+      </a>
+      <a class="indice__enlace" href="#programa">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Programa</span>
+      </a>
+      <a class="indice__enlace" href="#para-quien">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Para quién es</span>
+      </a>
+      <a class="indice__enlace" href="#al-terminar">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Al terminar</span>
+      </a>
+      <a class="indice__enlace" href="#preguntas">
+        <span class="indice__punto" aria-hidden="true"></span>
+        <span class="indice__texto">Preguntas</span>
+      </a>
+    </nav>
+
+    <main>
+      <!-- PORTADA -->
+      <section class="hero">
+        <div class="contenedor hero__grid">
+          <div>
+            <h1>
+              Testing QA de Videojuegos
+              <span class="hero__acento">desde adentro</span>
+            </h1>
+
+            <p class="hero__descripcion">
+              Probá videojuegos como lo hace un equipo profesional: buscá
+              fallas, evaluá la jugabilidad y ayudá a que el juego funcione bien
+              antes de salir. <strong>Jugás, pero con método.</strong>
+            </p>
+
+            <div class="datos">
+              <span class="dato">Gratuito</span>
+              <span class="dato">Nivel inicial</span>
+            </div>
+
+            <div class="botones">
+              <a
+                class="boton boton--amarillo"
+                href="https://wa.me/5493416206812?text=Hola%20Pakova%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20Testing%20QA%20de%20Videojuegos"
+                target="_blank"
+                rel="noopener"
+              >
+                Consultar por WhatsApp
+              </a>
+              <a class="boton boton--borde" href="#programa">
+                Ver el programa
+              </a>
+            </div>
+          </div>
+
+          <div class="hero__arte">
+            <img
+              src="../img/testing-qa-videojuegos-hero.svg"
+              alt="Un control de videojuegos con una lupa, una lista de errores y un reloj de rendimiento"
+              width="810"
+              height="810"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE EL CURSO -->
+      <section class="seccion" id="sobre">
+        <div class="contenedor animar">
+          <h2 class="etiqueta">Sobre el curso</h2>
+
+          <div class="sobre">
+            <p class="sobre__lead">
+              Antes de que un videojuego salga a la venta, un equipo de testers
+              lo juega una y otra vez para encontrar errores: personajes que
+              atraviesan paredes, niveles que no cargan, controles que no responden
+              o partes que resultan confusas.
+            </p>
+
+            <div class="sobre__texto">
+              <p>
+                En este curso vas a aprender a jugar con mirada profesional:
+                detectar fallas, evaluar la jugabilidad y el rendimiento, y comunicar
+                lo que encontrás para que el equipo de desarrollo pueda mejorar el
+                juego.
+              </p>
+              <p>
+                No se trata de jugar más horas, sino de mirar lo que otros no ven:
+                reproducir el error, describirlo con precisión y priorizar qué conviene
+                arreglar primero.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- QUÉ VAS A APRENDER -->
+      <section class="seccion" id="aprender">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Qué vas a aprender</p>
+            <h2>Jugar con mirada de tester</h2>
+            <p class="subtitulo">
+              Lo que se mira, se mide y se reporta cuando un juego está
+              en pleno desarrollo.
+            </p>
+          </div>
+
+          <ul class="puntos revelar">
+            <li>
+              <strong>Análisis de bugs</strong>
+              <span>
+                Qué tipos de errores aparecen en un juego (gráficos, de lógica,
+                de sonido, de colisiones) y cómo reproducirlos y documentarlos.
+              </span>
+            </li>
+            <li>
+              <strong>Jugabilidad</strong>
+              <span>
+                Cómo evaluar si un juego se entiende, si los controles responden
+                bien y si la dificultad está equilibrada.
+              </span>
+            </li>
+            <li>
+              <strong>Rendimiento</strong>
+              <span>
+                Qué mirar cuando un juego se traba, tarda en cargar o baja la
+                cantidad de cuadros por segundo.
+              </span>
+            </li>
+            <li>
+              <strong>Experiencia de usuario</strong>
+              <span>
+                Cómo detectar partes confusas, menús difíciles de usar o momentos
+                que frustran a quien juega.
+              </span>
+            </li>
+            <li>
+              <strong>Compatibilidad</strong>
+              <span>
+                Por qué un juego puede funcionar bien en un equipo y mal en otro, y
+                cómo se prueba en distintos dispositivos.
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PROGRAMA -->
+      <section class="seccion" id="programa">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Programa</p>
+            <h2>Cómo se organiza el curso</h2>
+            <p class="subtitulo">
+              Temas que van del error más visible a los detalles que
+              hacen que un juego se sienta bien.
+            </p>
+          </div>
+
+          <ol class="temario revelar">
+            <li>
+            <p> Clase <span class="temario__num" aria-hidden="true"></span></p>
+              <div>
+                <h3>Módulo 1 Fundamentos y proceso de desarrollo</h3>
+                <h4>Clases 1 a 4 · 8 h reloj · semanas 1 y 2 </h4>
+                <p> QA de videojuegos y rol del tester. Diferenciar jugar de probar con un objetivo. </p>
+              </div>
+            </li>
+            <li>
+            <p>Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>Géneros, plataformas y ciclo de desarrollo. Reconocer riesgos por tipo de juego.</p>
+              </div>
+            </li>
+            <li>
+             <p> Clase <span class="temario__num" aria-hidden="true"></span></p>
+              <div>
+                <p> Builds, ambientes y documentación. Registrar versión, equipo y configuración </p>
+              </div>
+            </li>
+
+            <li>
+            <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p> Defectos y evidencias. Redactar un reporte con pasos y video.</p>
+              </div>
+            </li>
+
+          <li>
+            <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+           <div>
+                <h3>Módulo 2 Diseño de pruebas de juego</h3>
+                <h4>Clases 5 a 8 · 8 h reloj · semanas 3 y 4 </h4>
+                <p> Mecánicas y reglas. Convertir una mecánica en condiciones comprobables. </p>
+              </div>
+
+            <li>
+            <p> Clase  <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p> Casos, listas y misiones exploratorias. Diseñar cobertura de una sección.</p>
+              </div>
+            </li>
+
+          <li>
+            <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+             <div>
+                <p> Estados, progresión y niveles. Probar transiciones, objetivos y bloqueos. </p>
+              </div>
+            </li>
+
+            <li>
+            <p>Clase  <span class="temario__num" aria-hidden="true"></span> </p>
+             <div>
+                <p> Guardado, carga e inventario. Verificar persistencia y recuperación de partidas.</p>
+              </div>
+            </li>
+            
+            <li>  
+              <p> Clase <span class="temario__num" aria-hidden="true"></span>  </p> 
+              <div>  
+                <h3>Módulo 3 Controles y experiencia audiovisual</h3>                
+                 <h4>Clases 9 a 12 · 8 h reloj · semanas 5 y 6</h4>
+                <p> Teclado, mouse y controles. Revisar acciones, reasignación y desconexión.</p>
+              </div>                
+            </li>  
+
+            <li>
+             <p> Clase <span class="temario__num" aria-hidden="true"></span> </p> 
+              <div>
+              <p> Colisiones, físicas y cámara. Reproducir problemas de movimiento.</p>
+              </div>
+            </li>
+          
+            <li>
+              <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p> Gráficos, animaciones y sonido. Registrar artefactos y desincronización   </p>
+              </div>
+            </li>
+
+            <li>
+             <p>Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                  Interfaz, accesibilidad y localización. Revisar textos, foco, subtítulos y opciones disponibles.
+                </p>
+              </div>
+            </li>
+          
+           <li>
+              <p>Clase <span class="temario__num" aria-hidden="true"></span> </p>
+            <div>
+                <h5>Cada clase dura 120 minutos. La actividad indicada forma parte de ese tiempo.</h5>               
+                <h3>Módulo 4 Proyecto y comunicación</h3>               
+                <h4>Clases 13 a 16 · 8 h reloj · semanas 7 y 8</h4>                
+                <p>
+                Resoluciones y configuraciones. Construir una matriz con el equipo disponible.
+                </p>
+             </div>
+            </li>       
+          
+            <li>
+              <p>Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                  Rendimiento básico. Registrar FPS y tiempos de carga bajo condiciones definidas.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <p>Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                  Red y multijugador si la demo lo permite. Simular desconexión y observar recuperación.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <p>Clase <span class="temario__num" aria-hidden="true"></span> </p>
+              <div>
+                <p>
+                  Smoke, regresión y retest. Validar una nueva build y revisar cobertura.
+                </p>
+              </div>
+            </li>
+
+            <li>
+             <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>            
+            <div>
+                <h3>Módulo 5 Proyecto y comunicación</h3>
+                <h4>Clases 17 a 20 · 8 h reloj · semanas 9 y 10</h4>
+                <p>
+               Alcance y riesgos de la demo. Definir campaña y criterios de cierre.
+                </p>
+             </div>
+            </li>
+
+            <li>
+            <p>Clase  <span class="temario__num" aria-hidden="true"></span> </p>
+            <div>
+                <p>
+               Ejecución de campaña. Distribuir sesiones y recopilar evidencias.
+                </p>
+             </div>
+            </li>
+
+             <li>
+            <p> Clase  <span class="temario__num" aria-hidden="true"></span> </p>
+            <div>
+                <p>
+              Triage y verificación. Revisar duplicados, reproducibilidad y gravedad.
+                </p>
+             </div>
+            </li>
+
+            <li>
+            <p> Clase <span class="temario__num" aria-hidden="true"></span> </p>
+            <div>
+                <p>
+              Presentación del informe. Defender hallazgos y proponer pruebas siguientes.
+                </p>
+             </div>
+            </li>           
+          </ol>
+       
+      </section>
+
+      <!-- PARA QUIÉN ES / REQUISITOS -->
+      <section class="seccion" id="para-quien">
+        <div class="contenedor columnas animar">
+          <div class="bloque">
+            <p class="etiqueta">Para quién es</p>
+            <h2>Si te gustan los juegos y querés ver cómo se hacen por dentro</h2>
+            <ul class="lista-puntos revelar">
+              <li>Personas a las que les gustan los videojuegos y quieren conocer la
+industria por dentro.</li>
+              <li>Quienes ya hicieron Testing QA Manual y quieren especializarse.</li>
+              <li>Personas observadoras y pacientes, con ganas de probar lo mismo muchas
+veces.</li>
+            </ul>
+          </div>
+
+          <div class="bloque">
+            <p class="etiqueta">Requisitos</p>
+            <h2>No hace falta ser gamer, sí ganas de jugar con atención</h2>
+            <ul class="lista-puntos revelar">
+              <li>Manejo básico de computadora.</li>
+              <li>Recomendable (no obligatorio): haber hecho Testing QA Manual.</li>
+              <li>Ganas de probar y volver a probar sin apuro.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- AL TERMINAR -->
+      <section class="seccion" id="al-terminar">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Al terminar</p>
+            <h2>Qué vas a poder hacer</h2>
+          </div>
+
+          <ul class="checklist revelar">
+              <li>Probar un videojuego de forma ordenada.</li>
+              <li>Detectar y clasificar distintos tipos de errores.</li>
+              <li>Escribir reportes que el equipo de desarrollo pueda usar.</li>
+              <li>Dar opiniones fundamentadas sobre jugabilidad y experiencia.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- PREGUNTAS FRECUENTES -->
+      <section class="seccion" id="preguntas">
+        <div class="contenedor">
+          <div class="seccion__cabeza animar">
+            <p class="etiqueta">Preguntas frecuentes</p>
+            <h2>Lo que suelen preguntarnos</h2>
+          </div>
+
+          <div class="faq animar">
+            <details>
+              <summary>¿Tengo que ser gamer?</summary>
+              <p>
+                No hace falta, pero sí ganas de jugar con atención y probar las
+                cosas muchas veces.
+              </p>
+            </details>
+            <details>
+              <summary>¿Es obligatorio haber hecho Testing QA Manual?</summary>
+              <p>
+                No es obligatorio, pero ayuda a entender las bases del testing. Si
+                todavía no lo hiciste, podés empezar por <a href="testing-qa-manual.html">Testing QA Manual</a>
+                y después volver a este curso.
+              </p>
+            </details>
+            <details>
+              <summary>¿Necesito consola o una computadora potente?</summary>
+              <p>
+                Consultanos: te contamos con qué equipos se trabaja en cada
+                convocatoria y cómo se organizan las prácticas.
+              </p>
+            </details>
+            <details>
+              <summary>¿El curso es gratuito?</summary>
+              <p>
+                Sí. Es gratuito, con acompañamiento y práctica desde la primera
+                clase.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- LLAMADO FINAL -->
+      <section class="cta-final">
+        <div class="contenedor cta-final__interior animar">
+          <div>
+            <h2>¿Te gustaría probar juegos como trabajo?</h2>
+            <p>
+              Escribinos y te contamos cuándo abre la próxima convocatoria, cómo
+              es la modalidad y qué necesitás para empezar.
+            </p>
+          </div>
+
+          <div class="cta-final__acciones">
+            <a
+              class="boton boton--amarillo"
+              href="https://wa.me/5493416206812?text=Hola%20Pakova%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20Testing%20QA%20de%20Videojuegos"
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar por WhatsApp
+            </a>
+            <a class="boton boton--borde" href="cursos.html#cursos">
+              Ver otros cursos
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- PIE -->
+    <footer class="site-footer">
+      <div class="contenedor site-footer__interior">
+        <span>Pakova Testing · Aprendé, practicá y creá.</span>
+        <a href="cursos.html#cursos">Volver a cursos ↑</a>
+      </div>
+    </footer>
+
+    <script src="../js/testing-qa-videojuegos.js" defer></script>
+  </body>
+</html>
